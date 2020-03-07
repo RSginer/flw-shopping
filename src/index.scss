@@ -2,7 +2,15 @@
 @import 'scss/colors';
 @import 'scss/mixins';
 
+// Flexboxgrid
+@import '~flexboxgrid/css/index.css';
+
+* {
+  box-sizing: border-box;
+}
+
 body {
+  background-color: $light;
   font-size: $baseFontSize;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

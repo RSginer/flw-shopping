@@ -1,0 +1,42 @@
+@import 'scss/vars';
+@import 'scss/colors';
+@import 'scss/mixins';
+
+.product-preview {
+  padding: 0;
+
+  .product-preview-content {
+    border-radius: $borderRadius;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+    margin: $baseSpacing;
+  
+    .product-image {
+      height: $productImageBaseHeight;
+      background-size: cover;
+      background-repeat: no-repeat;
+      @include top-border-radius($borderRadius);
+    }
+  
+    .product-body {
+      padding: $baseSpacing;
+      background-color: white;
+      @include bottom-border-radius($borderRadius);
+  
+      .product-name {
+        display: block;
+        font-size: 1.3em;
+      }
+  
+      .product-price {
+        color: $secondary;
+        font-weight: bold;
+        margin-top: $baseSpacing / 2;
+        display: block;
+  
+        &::before {
+          content: '$'
+        }
+      }
+    }
+  }
+}
