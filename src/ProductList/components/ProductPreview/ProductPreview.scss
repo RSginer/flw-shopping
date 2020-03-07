@@ -39,7 +39,10 @@
         display: block;
 
         &::before {
-          content: '$'
+          content: '$';
+          font-style: italic;
+          font-size: 0.8em;
+          margin-right: $baseSpacing / 4;
         }
       }
     }
