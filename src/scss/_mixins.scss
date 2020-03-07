@@ -12,3 +12,20 @@
   border-bottom-left-radius: $borderRadius;
   border-bottom-right-radius: $borderRadius;
 }
+
+@mixin product-price($color) {
+  color: $color;
+  display: block;
+  font-size: 0.8;
+
+  &::before {
+    content: '$';
+    font-style: italic;
+    font-size: 0.6em;
+    margin-right: $baseSpacing / 4;
+  }
+}
+
+@mixin shadow {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+}

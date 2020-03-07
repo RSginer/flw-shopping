@@ -7,8 +7,8 @@
 
   .product-preview-content {
     border-radius: $borderRadius;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
     margin: $baseSpacing;
+    @include shadow;
 
     .product-image {
       height: $productImageBaseHeight;
@@ -26,25 +26,40 @@
 
       .product-name {
         display: block;
-        font-size: 1.1em;
+        font-size: 0.9em;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
       }
 
-      .product-price {
-        color: $secondary;
-        font-weight: bold;
-        margin-top: $baseSpacing / 2;
-        display: block;
+      .product-body-bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: $baseSpacing;
+        align-items: center;
 
-        &::before {
-          content: '$';
-          font-style: italic;
-          font-size: 0.8em;
-          margin-right: $baseSpacing / 4;
+        button.add-to-cart {
+          border-radius: $borderRadius;
+          background-color: white;
+          color: darken($primary, $darkenPercent);
+          border: 1px solid $primary;
+          padding: $baseSpacing / 2;
+          font-size: 0.6em;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          text-transform: uppercase;
+
+          svg {
+            margin-right: $baseSpacing / 2;
+          }
+        }
+  
+        .product-price {
+          @include product-price($secondary)
         }
       }
+
     }
 
     .favorite-heart {
@@ -54,11 +69,32 @@
       cursor: pointer;
 
       svg.favorite {
-        fill: red;
+        fill: $favorite;
       }
 
       svg.non-favorite {
         fill: $light;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-medium) {
+  .product-preview {
+
+    .product-preview-content {
+
+      .product-body {
+        text-align: right;
+        .product-body-bottom {
+          display: block;
+          button.add-to-cart {
+            font-size: 0.55em;
+            width: 100%;
+            justify-content: center;
+            margin-top: $baseSpacing;
+          }
+        }
       }
     }
   }

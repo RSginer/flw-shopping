@@ -2,6 +2,7 @@ import React from 'react';
 import './ProductPreview.scss';
 import { Product } from '../../../models/Product';
 import FavoriteHeart from './components/FavoriteHeart/FavoriteHeart';
+import { PlusCircle } from 'react-feather';
 
 function ProductPreview(props: Product) {
   return (
@@ -12,7 +13,10 @@ function ProductPreview(props: Product) {
         </div>
         <div className="product-body">
           <span className="product-name">{props.productName}</span>
-          <span className="product-price">{props.price}</span>
+          <div className="product-body-bottom">
+            <span className="product-price">{props.price}</span>
+            <button className="add-to-cart"><PlusCircle size={18} /> Add to cart</button>
+          </div>
         </div>
       </div>
     </div>
