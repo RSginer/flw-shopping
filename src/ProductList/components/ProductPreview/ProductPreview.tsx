@@ -10,6 +10,7 @@ function ProductPreview(props: Product) {
       <div className="product-preview-content">
         <div className="product-image" style={{ backgroundImage: `url('${props.image_url}'` }}>
           <FavoriteHeart isFavorite={props.favorite !== 0} />
+          <span className="stock-label">{props.stock} in stock</span>
         </div>
         <div className="product-body">
           <span className="product-name">{props.productName}</span>

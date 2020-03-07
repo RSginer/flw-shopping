@@ -17,6 +17,19 @@
       background-repeat: no-repeat;
       background-position: center;
       @include top-border-radius($borderRadius);
+
+      .stock-label {
+        background-color: $dark;
+        opacity: 0.8;
+        color: $light;
+        position: absolute;
+        border-radius: $borderRadius;
+        left: $baseSpacing;
+        top: $baseSpacing;
+        font-size: 0.7em;
+        padding: 0 $baseSpacing / 2;
+
+      }
     }
 
     .product-body {
