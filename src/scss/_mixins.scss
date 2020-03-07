@@ -1,4 +1,14 @@
-@mixin background-grandient-darken($color, $darkenPercent) {
-  background: $color;
-  background: linear-gradient(90deg, $color 0%, darken($color, $darkenPercent) 50%);
+@mixin background-grandient-darken($bgColor, $darkenPercent) {
+  background: $bgColor;
+  background: linear-gradient(90deg, $bgColor 0%, darken($bgColor, $darkenPercent) 50%);
+}
+
+@mixin top-border-radius($borderRadius) {
+  border-top-left-radius: $borderRadius;
+  border-top-right-radius: $borderRadius;
+}
+
+@mixin bottom-border-radius($borderRadius) {
+  border-top-left-radius: $borderRadius;
+  border-top-right-radius: $borderRadius;
 }
