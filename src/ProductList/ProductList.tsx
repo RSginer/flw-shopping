@@ -45,8 +45,13 @@ const products: Array<Product> = [
 
 function ProductList() {
   return (
-    <div className="product-list row col-xs-12">
-      {products.map((product: Product) => <ProductPreview key={product.id} {...product}  />)}
+    <div className="product-list">
+      <div className="product-list-header">
+        <h2>Product List</h2>
+      </div>
+      <div className="list row col-xs-12">
+        {products.map((product: Product) => <ProductPreview key={product.id} {...product} />)}
+      </div>
     </div>
   );
 }
