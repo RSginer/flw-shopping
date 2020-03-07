@@ -52,7 +52,7 @@
         align-items: center;
 
         button.add-to-cart {
-          border-radius: $borderRadius;
+          border-radius: $borderRadius / 2;
           background-color: white;
           color: darken($primary, $darkenPercent);
           border: 1px solid $primary;
@@ -65,6 +65,11 @@
 
           svg {
             margin-right: $baseSpacing / 2;
+          }
+
+          &:hover {
+            @include background-grandient-darken($primary, $darkenPercent);
+            color: white;
           }
         }
   
