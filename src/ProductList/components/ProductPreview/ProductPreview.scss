@@ -14,6 +14,7 @@
       height: $productImageBaseHeight;
       background-size: cover;
       background-repeat: no-repeat;
+      background-position: center;
       @include top-border-radius($borderRadius);
     }
   
@@ -25,6 +26,9 @@
       .product-name {
         display: block;
         font-size: 1.3em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
   
       .product-price {
