@@ -4,7 +4,6 @@ export interface IFavoriteHeart {
   isFavorite: boolean
 }
 
-
 function FavoriteHeart(props: IFavoriteHeart) {
   return (
     <span className="favorite-heart">
