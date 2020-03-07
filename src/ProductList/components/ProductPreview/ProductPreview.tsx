@@ -6,7 +6,7 @@ import { PlusCircle } from 'react-feather';
 
 function ProductPreview(props: Product) {
   return (
-    <div className="product-preview col-xs-6 col-sm-3 col-md-2">
+    <div className="product-preview col-xs-6 col-sm-4 col-lg-3">
       <div className="product-preview-content">
         <div className="product-image" style={{ backgroundImage: `url('${props.image_url}'` }}>
           <FavoriteHeart isFavorite={props.favorite !== 0} />
