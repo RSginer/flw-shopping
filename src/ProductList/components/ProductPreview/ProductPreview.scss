@@ -7,22 +7,23 @@
 
   .product-preview-content {
     border-radius: $borderRadius;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
     margin: $baseSpacing;
-  
+
     .product-image {
       height: $productImageBaseHeight;
+      position: relative;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       @include top-border-radius($borderRadius);
     }
-  
+
     .product-body {
       padding: $baseSpacing;
       background-color: white;
       @include bottom-border-radius($borderRadius);
-  
+
       .product-name {
         display: block;
         font-size: 1.1em;
@@ -30,16 +31,30 @@
         overflow: hidden;
         text-overflow: ellipsis;
       }
-  
+
       .product-price {
         color: $secondary;
         font-weight: bold;
         margin-top: $baseSpacing / 2;
         display: block;
-  
+
         &::before {
           content: '$'
         }
+      }
+    }
+
+    .favorite-heart {
+      right: $baseSpacing;
+      top: $baseSpacing;
+      position: absolute;
+
+      svg.favorite {
+        fill: red;
+      }
+
+      svg.non-favorite {
+        fill: $light;
       }
     }
   }

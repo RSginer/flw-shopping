@@ -13,6 +13,7 @@
     "flexboxgrid": "^6.3.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-feather": "^2.0.3",
     "react-scripts": "3.4.0",
     "typescript": "~3.7.2"
   },
