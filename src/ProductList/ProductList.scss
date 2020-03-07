@@ -1,0 +1,9 @@
+@import 'scss/vars';
+@import 'scss/colors';
+@import 'scss/mixins';
+
+.test {
+  height: 200px;
+  width: 200px;
+  @include background-grandient-darken($primary, $darkenPercent)
+}
