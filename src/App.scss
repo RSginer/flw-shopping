@@ -2,6 +2,12 @@
 @import 'scss/colors';
 @import 'scss/mixins';
 
+.App {
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+}
+
 .product-list-header {
   display: block;
   background-color: white;

@@ -14,6 +14,11 @@ function App() {
           </div>
           <ProductList />
         </div>
+        <div className="col-xs-12 col-md-4">
+          <div className="product-list-header">
+            <h2>Cart</h2>
+          </div>
+        </div>
       </div>
     </main>
   );
