@@ -13,10 +13,10 @@ function ProductContainer() {
 
   return (
     <div className="product-container row">
-      <div className="col-xs-12 col-md-8">
+      <div className="col-xs-12 col-sm-12 col-md-8">
         <ProductList products={products} />
       </div>
-      <div className="col-xs-12 col-md-4">
+      <div className="hidden-xs hidden-sm col-md-4">
         <CartContainer orders={cart.orders} />
       </div>
     </div>
