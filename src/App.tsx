@@ -20,7 +20,7 @@ function App() {
       <main className="App">
         <div className="app-content">
           <Route path="/" exact component={ProductContainer} />
-          <Route path="/cart" exact component={() => <CartContainer {...cart.orders} />} />
+          <Route path="/cart" exact component={() => <CartContainer orders={cart.orders} />} />
         </div>
       </main>
     </ ConnectedRouter>

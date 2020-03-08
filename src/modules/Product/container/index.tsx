@@ -9,7 +9,7 @@ import { IAppState } from '../../../rootReducer';
 function ProductContainer() {
 
   const products = useSelector((s: IAppState) => s.product.productList)
-  
+  const cart = useSelector((s: IAppState) => s.cart)
 
   return (
     <div className="product-container row">
@@ -17,7 +17,7 @@ function ProductContainer() {
         <ProductList products={products} />
       </div>
       <div className="col-xs-12 col-md-4">
-        <CartContainer orders={[]} />
+        <CartContainer orders={cart.orders} />
       </div>
     </div>
 
