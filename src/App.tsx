@@ -1,11 +1,10 @@
 import React from 'react';
 
-import ProductList from './modules/ProductList/ProductList';
-
 import './App.scss';
 import { Product } from './models/Product';
 import { Cart } from './models/Cart';
-import CartContainer from './modules/Cart/CartContainer';
+import CartContainer from './modules/Cart/components/CartContainer/CartContainer';
+import ProductList from './modules/Product/components/ProductList/ProductList';
 
 const products: Product[] = [
   {

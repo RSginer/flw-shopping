@@ -1,6 +1,6 @@
 import React from 'react';
-import OrderItem from './components/OrderItem/OrderItem';
-import { ICart } from '../../models/Cart';
+import OrderItem from '../OrderItem/OrderItem';
+import { ICart } from '../../../../models/Cart';
 
 import './CartContainer.scss';
 
