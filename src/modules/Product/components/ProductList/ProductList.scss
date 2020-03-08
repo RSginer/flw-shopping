@@ -5,7 +5,7 @@
 .product-list {
   margin: 0 auto;
   width: 100%;
-  @include custom-scroll-bar($secondary, $primary);
+  @include custom-scroll-bar(white, white);
 
   .list {
     padding: $baseSpacing;

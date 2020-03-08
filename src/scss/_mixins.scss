@@ -39,6 +39,7 @@
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
+    @include shadow;
   }
 
   ::-webkit-scrollbar-button {
@@ -49,7 +50,7 @@
   ::-webkit-scrollbar-thumb {
     background: $secondary;
     border: 0px none white;
-    border-radius: 0px;
+    border-radius: 0;
   }
 
   ::-webkit-scrollbar-thumb:hover {
@@ -61,17 +62,17 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: lighten($color: $secondary, $amount: 20);
+    background: darken($color: $secondary, $amount: 20);
     border: 0px none #ffffff;
-    border-radius: 100px;
+    border-radius: 0;
   }
 
   ::-webkit-scrollbar-track:hover {
-    background: lighten($color: $primary, $amount: 20);
+    background: darken($color: $primary, $amount: 20);
   }
 
   ::-webkit-scrollbar-track:active {
-    background: lighten($color: $primary, $amount: 20);
+    background: darken($color: $primary, $amount: 20);
   }
 
   ::-webkit-scrollbar-corner {
