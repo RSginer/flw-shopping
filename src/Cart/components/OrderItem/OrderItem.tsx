@@ -1,14 +1,10 @@
 import React from 'react';
-import { Product } from '../../../models/Product';
+import { Order } from '../../../models/Order';
+
 
 import './OrderItem.scss';
 
-export interface IOrderItem {
-  product: Product;
-  quantity: number;
-}
-
-function OrderItem(props: IOrderItem) {
+function OrderItem(props: Order) {
   return (
     <div className="order-item">
       <div className="order-product-image" style={{backgroundImage: `url('${props.product.image_url}')`}}></div>

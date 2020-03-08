@@ -1,10 +1,11 @@
 import React from 'react';
 
 import ProductList from './ProductList/ProductList';
-import Cart, { ICart } from './Cart/Cart';
 
 import './App.scss';
 import { Product } from './models/Product';
+import { Cart } from './models/Cart';
+import CartContainer from './Cart/CartContainer';
 
 const products: Product[] = [
   {
@@ -45,18 +46,16 @@ const products: Product[] = [
   }
 ];
 
-const cart: ICart = {
-  orders: [
-    {
-      product: products[0],
-      quantity: 1
-    },
-    {
-      product: products[1],
-      quantity: 1
-    }
-  ]
-}
+const cart: Cart = new Cart([
+  {
+    product: products[0],
+    quantity: 1
+  },
+  {
+    product: products[1],
+    quantity: 1
+  }
+]);
 
 function App() {
   return (
@@ -66,7 +65,7 @@ function App() {
           <ProductList products={products} />
         </div>
         <div className="col-xs-12 col-md-4">
-          <Cart {...cart} />
+          <CartContainer orders={cart.orders}/>
         </div>
       </div>
     </main>
