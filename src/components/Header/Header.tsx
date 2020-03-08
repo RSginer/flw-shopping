@@ -6,7 +6,7 @@ export interface IHeader {
   title: string;
 }
 
-function Header(props: any) {
+function Header(props: IHeader) {
   return (
     <div className="header">
       <div className="container-fluid">
