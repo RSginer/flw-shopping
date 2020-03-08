@@ -22,11 +22,6 @@
     flex: 2;
     padding: $baseSpacing;
 
-    .order-title {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
   }
 
   .order-price {

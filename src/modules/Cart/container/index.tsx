@@ -1,11 +1,11 @@
 import React from 'react';
-import OrderItem from '../OrderItem/OrderItem';
-import { ICart } from '../../../../models/Cart';
+import OrderItem from '../components/OrderItem/OrderItem';
 
-import './CartContainer.scss';
+import './index.scss';
+import { ICartState } from '../reducer';
 
 
-function CartContainer(props: ICart) {
+function CartContainer(props: ICartState) {
   return (
     <div className="cart">
       <div className="cart-orders-list">
