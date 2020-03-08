@@ -13,9 +13,7 @@
     .product-image {
       height: $productImageBaseHeight;
       position: relative;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+      @include background-image-cover;
       @include top-border-radius($borderRadius);
 
       .stock-label {

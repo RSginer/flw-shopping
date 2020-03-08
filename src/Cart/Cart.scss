@@ -1,0 +1,15 @@
+@import 'scss/vars';
+@import 'scss/colors';
+@import 'scss/mixins';
+
+.cart {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: $baseSpacing * 2;
+  padding: $baseSpacing;
+  border-radius: $borderRadius;
+  background-color: white;
+  @include shadow;
+  min-height: 90vh;
+}

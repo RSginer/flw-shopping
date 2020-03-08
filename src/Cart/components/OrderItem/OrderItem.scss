@@ -1,0 +1,36 @@
+@import 'scss/vars';
+@import 'scss/colors';
+@import 'scss/mixins';
+
+.order-item {
+  display: flex;
+  background-color: white;
+  border: 1px solid $light;
+  margin-bottom: $baseSpacing;
+  border-radius: $borderRadius;
+
+  .order-product-image {
+    width: 100px;
+    height: 100px;
+    border-radius: $borderRadius;
+    @include background-image-cover;
+  }
+
+  .order-title-and-quantity {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 2;
+    padding: $baseSpacing;
+  }
+
+  .order-price {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+    padding: $baseSpacing;
+    @include product-price($secondary)
+  }
+}
