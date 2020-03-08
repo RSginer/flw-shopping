@@ -2,7 +2,7 @@ import React from 'react';
 import './ProductPreview.scss';
 
 import { PlusCircle } from 'react-feather';
-import FavoriteHeart from './FavoriteHeart';
+import FavoriteHeart from '../FavoriteHeart/FavoriteHeart';
 import { Product } from '../../../../models/Product';
 
 function ProductPreview(props: Product) {
