@@ -6,6 +6,11 @@
   margin-left: auto;
   margin-right: auto;
   overflow-x: hidden;
+  height: 100vh;
+}
+
+.app-content {
+  height: 100%;
 }
 
 .product-list-header {

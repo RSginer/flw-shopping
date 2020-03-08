@@ -54,13 +54,21 @@ const cart: Cart = new Cart([
   {
     product: products[1],
     quantity: 1
+  },
+  {
+    product: products[2],
+    quantity: 1
+  },
+  {
+    product: products[3],
+    quantity: 1
   }
 ]);
 
 function App() {
   return (
     <main className="App">
-      <div className="row">
+      <div className="app-content row">
         <div className="col-xs-12 col-md-8">
           <ProductList products={products} />
         </div>

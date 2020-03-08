@@ -6,10 +6,16 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  flex: 1;
   margin: $baseSpacing * 2;
   padding: $baseSpacing;
   border-radius: $borderRadius;
   background-color: white;
   @include shadow;
-  height: 100%;
+  height: calc(100% - (#{$baseSpacing} * 4));
+
+  .cart-order-list {
+    overflow-y: scroll;
+    max-height: 90%;
+  }
 }
