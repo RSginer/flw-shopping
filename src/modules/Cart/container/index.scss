@@ -11,8 +11,10 @@
   padding: $baseSpacing;
   border-radius: $borderRadius;
   background-color: white;
-  @include shadow;
   height: calc(100% - (#{$baseSpacing} * 4));
+
+  @include custom-scroll-bar($primary, $secondary);
+  @include shadow;
 
   .cart-orders-list {
     border-radius: $borderRadius;
