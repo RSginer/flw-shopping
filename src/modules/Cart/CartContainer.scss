@@ -14,8 +14,41 @@
   @include shadow;
   height: calc(100% - (#{$baseSpacing} * 4));
 
-  .cart-order-list {
+  .cart-orders-list {
+    border-radius: $borderRadius;
     overflow-y: scroll;
-    max-height: 90%;
+    height: calc(80vh - (#{$baseSpacing} * 4));
+
+    .order-item:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .cart-total-price {
+    display: flex;
+    flex: 0.5;
+    justify-content: space-around;
+    padding-bottom: $baseSpacing;
+    border-bottom: 1px solid $light;
+
+    .total-label {
+      text-align: right;
+      font-weight: bold;
+      font-size: 0.8em;
+    }
+
+    .total-label-amount {
+      @include product-price($primary);
+      text-align: right;
+    }
+  }
+
+  .checkout-button {
+    @include background-grandient-darken($primary, $darkenPercent);
+    color: white;
+    padding: $baseSpacing;
+    border-radius: $borderRadius;
+    font-weight: bold;
+    border: none;
   }
 }
