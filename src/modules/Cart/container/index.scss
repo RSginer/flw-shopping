@@ -8,7 +8,6 @@
   flex-direction: column;
   flex: 1;
   margin: $baseSpacing * 2;
-  margin-left: $baseSpacing;
   padding: $baseSpacing;
   border-radius: $borderRadius;
   background-color: white;
@@ -54,11 +53,5 @@
     border-radius: $borderRadius;
     font-weight: bold;
     border: none;
-  }
-}
-
-@media only screen and (max-width: $bp-large) {
-  .cart {
-    margin-left: $baseSpacing * 2;
   }
 }
