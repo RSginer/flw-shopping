@@ -9,6 +9,7 @@ import ProductContainer from './modules/Product/container';
 import { useSelector } from 'react-redux';
 import { IAppState } from './rootReducer';
 import CartContainer from './modules/Cart/container';
+import Header from './components/Header/Header';
 
 
 
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <ConnectedRouter history={history}>
+      <Header />
       <main className="App">
         <div className="app-content">
           <Route path="/" exact component={ProductContainer} />

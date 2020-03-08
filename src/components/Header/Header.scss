@@ -1,0 +1,20 @@
+@import 'scss/vars';
+@import 'scss/colors';
+@import 'scss/mixins';
+
+.header {
+  background-color: white;
+  height: $headerHeight;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include shadow;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+  }
+}
