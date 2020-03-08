@@ -1,0 +1,23 @@
+@import 'scss/vars';
+@import 'scss/colors';
+@import 'scss/mixins';
+
+.input-number {
+  width: 100px;
+  padding: $baseSpacing / 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid $light;
+
+  input {
+    width: 50px;
+    border: none;
+    text-align: center;
+    font-size: 0.8em;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+}
