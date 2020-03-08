@@ -13,9 +13,11 @@ import Header from './components/Header/Header';
 
 function App() {
 
+  const appTitle = "Welcome to my Shop 🛍"
+
   return (
     <ConnectedRouter history={history}>
-      <Header />
+      <Header title={appTitle} />
       <main className="App">
         <div className="app-content">
           <Route path="/" exact component={ProductContainer} />
