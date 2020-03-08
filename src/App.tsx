@@ -6,15 +6,12 @@ import { ConnectedRouter } from 'connected-react-router';
 import { history } from './createStore';
 import { Route } from "react-router-dom";
 import ProductContainer from './modules/Product/container';
-import { useSelector } from 'react-redux';
-import { IAppState } from './rootReducer';
 import CartContainer from './modules/Cart/container';
 import Header from './components/Header/Header';
 
 
 
 function App() {
-  const cart = useSelector((s: IAppState) => s.cart);
 
   return (
     <ConnectedRouter history={history}>
@@ -22,7 +19,7 @@ function App() {
       <main className="App">
         <div className="app-content">
           <Route path="/" exact component={ProductContainer} />
-          <Route path="/cart" exact component={() => <CartContainer orders={cart.orders} />} />
+          <Route path="/cart" exact component={CartContainer} />
         </div>
       </main>
     </ ConnectedRouter>

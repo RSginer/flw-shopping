@@ -3,14 +3,18 @@ import OrderItem from '../components/OrderItem/OrderItem';
 
 import './index.scss';
 import { ICartState } from '../reducer';
+import { useSelector } from 'react-redux';
+import { IAppState } from '../../../rootReducer';
 
 
 function CartContainer(props: ICartState) {
+
+  const orders = useSelector((s: IAppState) => s.cart.orders)
   return (
     <div className="cart">
       <div className="cart-orders-list">
-        {props.orders.map((o, i) => <OrderItem key={i} {...o} />)}
-        {props.orders.map((o, i) => <OrderItem key={i} {...o} />)}
+        {orders.map((o, i) => <OrderItem key={i} {...o} />)}
+        {orders.map((o, i) => <OrderItem key={i} {...o} />)}
 
       </div>
       <hr />
