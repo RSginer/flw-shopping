@@ -9,8 +9,8 @@
   border-radius: $borderRadius;
 
   .order-product-image {
-    width: 100px;
-    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
     border-radius: $borderRadius;
     @include background-image-cover;
   }
@@ -21,6 +21,12 @@
     justify-content: space-between;
     flex: 2;
     padding: $baseSpacing;
+
+    .order-title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   .order-price {
