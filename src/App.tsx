@@ -13,7 +13,7 @@ import Header from './modules/Header/components/Header';
 
 function App() {
 
-  const appTitle = "Welcome to my Shop 🛍"
+  const appTitle = "Shop 🛍"
 
   return (
     <ConnectedRouter history={history}>

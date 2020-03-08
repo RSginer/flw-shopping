@@ -18,7 +18,7 @@
 
   .cart-orders-list {
     border-radius: $borderRadius;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: calc(80vh - (#{$baseSpacing} * 4) - #{$headerHeight});
 
     .order-item:last-child {
