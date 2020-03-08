@@ -16,7 +16,7 @@ function ProductContainer() {
       <div className="col-xs-12 col-sm-12 col-md-8">
         <ProductList products={products} />
       </div>
-      <div className="hidden-xs hidden-sm col-md-4">
+      <div className="hidden-xs hidden-sm col-md-4 cart-container-wrapper">
         <CartContainer orders={cart.orders} />
       </div>
     </div>
