@@ -5,11 +5,14 @@
 .product-list {
   margin: 0 auto;
   width: 100%;
+  @include custom-scroll-bar($secondary, $primary);
 
   .list {
     padding: $baseSpacing;
     margin: 0 auto;
     display: flex;
     flex: 1;
+    overflow-y: scroll;
+    height: calc(100vh - #{$headerHeight});
   }
 }
