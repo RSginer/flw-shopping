@@ -7,7 +7,7 @@ import { history } from './createStore';
 import { Route } from "react-router-dom";
 import ProductContainer from './modules/Product/container';
 import CartContainer from './modules/Cart/container';
-import Header from './components/Header/Header';
+import Header from './modules/Header/components/Header';
 
 
 
