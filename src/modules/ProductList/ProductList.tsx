@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProductList.scss';
 import ProductPreview from './components/ProductPreview/ProductPreview';
-import { Product } from '../models/Product';
+import { Product } from '../../models/Product';
 
 export interface IProductList {
   products: Product[]

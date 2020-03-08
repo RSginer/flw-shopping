@@ -11,5 +11,5 @@
   border-radius: $borderRadius;
   background-color: white;
   @include shadow;
-  min-height: 90vh;
+  height: 100%;
 }
