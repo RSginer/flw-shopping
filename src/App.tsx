@@ -8,7 +8,7 @@ import { Route, Switch } from "react-router-dom";
 
 import  { ProductContainer }  from './modules/Product';
 import { CartContainer } from './modules/Cart';
-import { Header } from './modules/Common';
+import { Header } from './modules/Shared';
 
 
 

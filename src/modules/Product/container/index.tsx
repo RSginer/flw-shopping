@@ -8,7 +8,7 @@ import { IAppState } from '../../../rootReducer';
 import { ProductListEmpty, ProductList, ProductLoading } from '../components';
 import { types } from '../actions';
 import * as CartAction from '../../Cart/actions'
-import { setRoute } from '../../Common/actions';
+import { setRoute } from '../../Shared/actions';
 import { Product } from '../../../models';
 
 

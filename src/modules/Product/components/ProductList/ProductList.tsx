@@ -2,7 +2,7 @@ import React from 'react';
 
 import './ProductList.scss';
 
-import { ProductPreview } from '../../../Common';
+import { ProductPreview } from '../../../Shared';
 import { Product } from '../../../../models';
 
 export interface IProductList {

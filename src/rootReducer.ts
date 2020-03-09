@@ -4,7 +4,7 @@ import { History } from 'history';
 
 import { productReducer, IProductState } from './modules/Product';
 import { cartReducer, ICartState } from './modules/Cart';
-import { ICommonState, commonReducer } from './modules/Common/reducer';
+import { ICommonState, commonReducer } from './modules/Shared/reducer';
 
 export interface IAppState {
   common: ICommonState,

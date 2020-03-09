@@ -6,7 +6,7 @@ import './index.scss';
 import { IAppState } from '../../../rootReducer';
 import { EmptyOrders } from '../components/EmptyOrders/EmptyOrders';
 import { OrderItem } from '../components/OrderItem/OrderItem';
-import { setRoute } from '../../Common/actions';
+import { setRoute } from '../../Shared/actions';
 import { Order } from '../../../models';
 import { addToCart, removeFromCart } from '../actions';
 
