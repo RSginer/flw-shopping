@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Header.scss';
-import { FavoriteHeart } from '../../../Product';
+import { FavoriteHeart } from '../FavoriteHeart/FavoriteHeart';
 import { ShoppingCart, ArrowLeft } from 'react-feather';
 import { useDispatch, useSelector } from 'react-redux';
 import { push } from 'connected-react-router';
