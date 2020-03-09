@@ -8,7 +8,7 @@ import { EmptyOrders } from '../components/EmptyOrders/EmptyOrders';
 import { OrderItem } from '../components/OrderItem/OrderItem';
 import { setRoute } from '../../Common/actions';
 import { Order } from '../../../models';
-import { types, addToCart, removeFromCart } from '../actions';
+import { addToCart, removeFromCart } from '../actions';
 
 
 export interface ICartContainer {
