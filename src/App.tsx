@@ -20,7 +20,7 @@ function App() {
           <Switch>
             <Route path="/" exact component={ProductContainer} />
             <Route path="/cart" exact component={() => <CartContainer setHeader={true} />} />
-            <Route path="/favorites" exact component={() => <ProductContainer favorites={true} />} />
+            <Route path="/favorites" exact component={() => <ProductContainer isFavorites={true} />} />
           </Switch>
         </div>
       </main>
