@@ -69,6 +69,13 @@
             @include background-grandient-darken($primary, $darkenPercent);
             color: white;
           }
+
+          &:disabled {
+            background: $light;
+            color: white;
+            border-color: white;
+            cursor: not-allowed;
+          }
         }
   
         .product-price {

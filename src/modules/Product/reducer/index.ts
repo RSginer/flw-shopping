@@ -1,6 +1,7 @@
 import { Product, Action } from "../../../models";
 import { types } from "../actions";
-
+import * as CartActions from '../../Cart/actions';
+import { ProductList } from "../components";
 export interface IProductState {
   productList: Product[];
   loading: boolean;
@@ -19,7 +20,23 @@ export const productReducer = (state: IProductState = {
       return { ...state, productList: action.payload.data, loading: false, error: null };
     case types.FETCH_PRODUCTS_ERROR:
       return { ...state, productList: [], loading: false, error: action.payload };
+    case CartActions.types.ADD_TO_CART:
+      return addProductToCart(state, action)
     default:
       return state
   }
+}
+
+function addProductToCart(state: IProductState, action: Action): IProductState {
+  const product = state.productList.find((p: Product) => p.id === action.payload.id);
+
+  if (product) {
+    if (product.stock && product?.stock > 0) {
+      product.stock--;
+    }
+
+    return { ...state, productList: [...state.productList, product] }
+  }
+
+  return state;
 }

@@ -22,9 +22,9 @@ function addProductToCart(state: ICartState, action: Action): ICartState {
   const productInCart = orders.find((o: Order) => o.product.id === action.payload.id)
   
   if (productInCart) {
-    productInCart.quantity++;
+    action.payload.stock > 0 && productInCart.quantity++;
   } else {
-    orders.push(new Order(action.payload, 1))
+    action.payload.stock > 0 && orders.push(new Order(action.payload, 1));
   }
 
   return {...state, orders: [...orders]};
