@@ -31,7 +31,7 @@ export function CartContainer(props: ICartContainer = { setHeader: true }) {
 
   useEffect(() => {
     if (props.setHeader) {
-      dispatch(setRoute(true, false, false, 'Cart'))
+      dispatch(setRoute(true, false, false, 'Cart 🛒'))
     }
   }, [dispatch, props])
 

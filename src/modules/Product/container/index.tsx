@@ -19,7 +19,7 @@ export function ProductContainer() {
   const error = useSelector((s: IAppState) => s.product.error)
 
   useEffect(() => {
-    dispatch(setRoute(false, true, true, 'Product List'))
+    dispatch(setRoute(false, true, true, 'Shop 🛍'))
     dispatch({ type: types.FETCH_PRODUCTS })
   }, [dispatch])
 
