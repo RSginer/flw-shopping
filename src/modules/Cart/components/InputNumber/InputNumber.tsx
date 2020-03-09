@@ -13,7 +13,7 @@ export function InputNumber(props: IInputNumber) {
   return (
     <div className="input-number">
       <Plus size={15} />
-      <input className="input" type="number" value={props.value} max={props.max} />
+      <input className="input" readOnly type="number" value={props.value} max={props.max} />
       <Minus size={15} />
     </div>
   );
