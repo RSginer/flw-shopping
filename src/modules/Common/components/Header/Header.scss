@@ -3,6 +3,8 @@
 @import 'scss/mixins';
 
 .header {
+  position: relative;
+  z-index: 2;
   background-color: white;
   height: $headerHeight;
   margin: 0;
