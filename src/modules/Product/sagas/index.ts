@@ -7,7 +7,7 @@ function* getProducts() {
     const products = yield call(fetchProducts);
     yield put({ type: types.FETCH_PRODUCTS_SUCCESS, payload: products });
   } catch (e) {
-    put(new Action(types.FETCH_PRODUCTS_ERROR, e));
+    put({ type: types.FETCH_PRODUCTS_ERROR, payload: e });
   }
 }
 
