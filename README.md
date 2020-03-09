@@ -1,3 +1,7 @@
+# Shopping
+
+<img src="https://raw.githubusercontent.com/RSginer/flw-shopping/master/screenshots.png"/>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
