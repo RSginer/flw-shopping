@@ -1,14 +1,14 @@
 import { Action } from "../../../models/Action";
 import { types } from "../actions/types";
 
-export interface ICommonState {
+export interface ISharedState {
   backButton: boolean;
   title: string;
   favoritesButton: boolean;
   showCartIcon: boolean;
 }
 
-export const commonReducer = (state: ICommonState = {
+export const sharedReducer = (state: ISharedState = {
   backButton: false,
   title: 'Shop 🛍',
   favoritesButton: true,
