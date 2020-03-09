@@ -36,28 +36,35 @@ export const productReducer = (state: IProductState = {
 }
 
 function increaseStock(state: IProductState, action: Action): IProductState {
-  const product = state.productList.find((p: Product) => p.id === action.payload.id);
-
+  const index = state.productList.findIndex((p: Product) => p.id === action.payload.id);
+  let product = state.productList[index];
+  
   if (product) {
     if (product.stock !== undefined) {
       product.stock++;
     }
 
-    return { ...state, productList: [...state.productList, product] }
+    product = Object.assign({}, product);
+
+
+    return { ...state, productList: [...state.productList] }
   }
 
   return state;
 }
 
 function decreaseStock(state: IProductState, action: Action): IProductState {
-  const product = state.productList.find((p: Product) => p.id === action.payload.id);
+  const index = state.productList.findIndex((p: Product) => p.id === action.payload.id);
+  let product = state.productList[index];
 
   if (product) {
     if (product.stock !== undefined) {
       product.stock--;
     }
 
-    return { ...state, productList: [...state.productList, product] }
+    product = Object.assign({}, product);
+  
+    return { ...state, productList: [...state.productList] }
   }
 
   return state;
