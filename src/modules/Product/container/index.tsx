@@ -1,16 +1,21 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 import './index.scss';
 
 import { CartContainer } from '../../Cart';
 import { IAppState } from '../../../rootReducer';
 import { ProductListEmpty, ProductList } from '../components';
+import { types } from '../actions';
 
 
 export function ProductContainer() {
-
+  const dispatch = useDispatch();
   const products = useSelector((s: IAppState) => s.product.productList)
+
+  useEffect(() => {
+    dispatch({type: types.FETCH_PRODUCTS})
+  }, [dispatch])
 
   return (
     <div className="product-container row">
