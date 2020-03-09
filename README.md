@@ -60,5 +60,5 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 # Others of my React projects
- - [Idle Capitalist](https://github.com/RSginer/idle-capitalist)
- - [My Binge List](https://github.com/RSginer/react-movie-binge-list)
+ - [Idle Capitalist](https://github.com/RSginer/idle-capitalist): Video Game Full Stack JS
+ - [My Binge List](https://github.com/RSginer/react-movie-binge-list): TDD with Jest
