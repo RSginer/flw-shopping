@@ -37,7 +37,7 @@ function increaseStock(state: IProductState, action: Action): IProductState {
   const product = state.productList.find((p: Product) => p.id === action.payload.id);
 
   if (product) {
-    if (product.stock) {
+    if (product.stock !== undefined) {
       product.stock++;
     }
 
