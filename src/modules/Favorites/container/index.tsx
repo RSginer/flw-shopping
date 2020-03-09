@@ -12,7 +12,7 @@ export const FavoritesContainer = () => {
   }, [dispatch])
   return (
     <div className="favorites-container">
-      Favorites
+      Favorites (not implemented yet)
     </div>
   )
 }
