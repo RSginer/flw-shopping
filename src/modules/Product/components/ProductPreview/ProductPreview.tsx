@@ -2,17 +2,18 @@ import React from 'react';
 import './ProductPreview.scss';
 
 import { PlusCircle } from 'react-feather';
-import { FavoriteHeart } from '../../../Shared/components/FavoriteHeart/FavoriteHeart';
 import { Product } from '../../../../models';
+import { FavoriteHeart } from '../../../Shared';
 
 export interface IProductPreview {
   product: Product;
+  favorites: boolean;
   onAddToCart: Function;
 }
 
 export function ProductPreview(props: IProductPreview) {
   return (
-    <div className="product-preview col-xs-6 col-sm-4 col-lg-3">
+    <div className={`product-preview col-xs-6 col-sm-4 col-lg-${props.favorites ? '2' : '3'}`}>
       <div className="product-preview-content">
         <div className="product-image" style={{ backgroundImage: `url('${props.product.image_url}'` }}>
           <FavoriteHeart isFavorite={props.product.favorite !== 0} />

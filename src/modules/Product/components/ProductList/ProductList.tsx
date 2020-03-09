@@ -2,8 +2,8 @@ import React from 'react';
 
 import './ProductList.scss';
 
-import { ProductPreview } from '../../../Shared';
 import { Product } from '../../../../models';
+import { ProductPreview } from '../ProductPreview/ProductPreview';
 
 export interface IProductList {
   products: Product[];
@@ -21,7 +21,7 @@ export function ProductList(props: IProductList) {
   return (
     <div className="product-list">
       <div className="list row col-xs-12">
-        {products.map((product: Product, i) => <ProductPreview onAddToCart={props.onAddToCart} key={i} product={product} />)}
+        {products.map((product: Product, i) => <ProductPreview favorites={props.favorites} onAddToCart={props.onAddToCart} key={i} product={product} />)}
       </div>
     </div>
   );
