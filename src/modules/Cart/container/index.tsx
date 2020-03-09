@@ -48,7 +48,7 @@ export function CartContainer(props: ICartContainer = { setHeader: true }) {
         <span className="total-label">Total Amount</span>
         <span className="total-label-amount">{getTotalAmount(orders)}</span>
       </div>}
-      <button disabled={orders.length === 0} className="checkout-button">Make a payment</button>
+      <button onClick={() => alert(`Pay $${getTotalAmount(orders)} and we will send your order`)} disabled={orders.length === 0} className="checkout-button">Make a payment</button>
     </div>
   );
 }
