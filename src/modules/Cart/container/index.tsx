@@ -14,8 +14,6 @@ function CartContainer(props: ICartState) {
     <div className="cart">
       <div className="cart-orders-list">
         {orders.map((o, i) => <OrderItem key={i} {...o} />)}
-        {orders.map((o, i) => <OrderItem key={i} {...o} />)}
-
       </div>
       <hr />
       <div className="cart-total-price">
