@@ -27,7 +27,7 @@ export function ProductContainer(props: IProductContainer = { favorites: false }
     if (!props.favorites) {
       dispatch(setRoute(false, true, true, 'Shop 🛍'))
     } else {
-      dispatch(setRoute(true, false, false, 'Favorites ❤️'))
+      dispatch(setRoute(true, false, true, 'Favorites ❤️'))
     }
 
 

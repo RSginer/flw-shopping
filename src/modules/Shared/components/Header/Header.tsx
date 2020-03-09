@@ -4,7 +4,7 @@ import './Header.scss';
 import { FavoriteHeart } from '../FavoriteHeart/FavoriteHeart';
 import { ShoppingCart, ArrowLeft } from 'react-feather';
 import { useDispatch, useSelector } from 'react-redux';
-import { push } from 'connected-react-router';
+import { push, goBack } from 'connected-react-router';
 import { IAppState } from '../../../../rootReducer';
 import { Order } from '../../../../models';
 
@@ -30,11 +30,11 @@ export function Header() {
       <div className="container-fluid header-content">
         <div className="left-icons">
           {favoritesButton && <span className="favorite-icon" onClick={() => dispatch(push('/favorites'))}><FavoriteHeart isFavorite={true} /></span>}
-          {backButton && <ArrowLeft onClick={() => dispatch(push('/'))} size={25} />}
+          {backButton && <ArrowLeft onClick={() => dispatch(goBack())} size={25} />}
         </div>
         <h1 className="app-title">{title}</h1>
         <div className="cart-icon">
-          {showCartIcon && <span className="hidden-md hidden-lg" onClick={() => dispatch(push('/cart'))}>
+          {showCartIcon && <span className={showCartIcon && !favoritesButton ? '' : "hidden-md hidden-lg"} onClick={() => dispatch(push('/cart'))}>
               <ShoppingCart size={25} />
               <span className="items-in-cart-count">{getTotalQuantity(orders)}</span>
           </span>}
