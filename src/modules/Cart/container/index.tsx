@@ -19,15 +19,13 @@ export function CartContainer(props: ICartContainer = { setHeader: true }) {
   const orders = useSelector((s: IAppState) => s.cart.orders);
 
   function getTotalAmount(orders: Order[]): number {
-    let totalAmount = 0;
-
-    orders.map((o: Order) => {
+    return orders.map((o: Order) => {
       if (o.product && o.product.price) {
-        totalAmount += o.product.price * o.quantity;
+        return o.product.price * o.quantity;
+      } else {
+        return 0
       }
-    })
-
-    return totalAmount;
+    }).reduce((p: number, c: number) => p + c);
   }
 
   useEffect(() => {
