@@ -2,13 +2,12 @@ import React from 'react';
 import OrderItem from '../components/OrderItem/OrderItem';
 
 import './index.scss';
-import { ICartState } from '../reducer';
 import { useSelector } from 'react-redux';
 import { IAppState } from '../../../rootReducer';
 import EmpryOrders from '../components/EmptyOrders/EmptyOrders';
 
 
-function CartContainer(props: ICartState) {
+function CartContainer() {
 
   const orders = useSelector((s: IAppState) => s.cart.orders)
   return (

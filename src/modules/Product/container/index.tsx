@@ -10,7 +10,6 @@ import ProductListEmpty from '../components/ProductListEmpty/ProductListEmpty';
 function ProductContainer() {
 
   const products = useSelector((s: IAppState) => s.product.productList)
-  const cart = useSelector((s: IAppState) => s.cart)
 
   return (
     <div className="product-container row">
@@ -19,7 +18,7 @@ function ProductContainer() {
         {products.length === 0 && <ProductListEmpty />}
       </div>
       <div className="hidden-xs col-md-4 cart-container-wrapper">
-        <CartContainer orders={cart.orders} />
+        <CartContainer />
       </div>
     </div>
 
