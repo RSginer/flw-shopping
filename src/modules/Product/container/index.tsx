@@ -6,7 +6,7 @@ import './index.scss';
 import { CartContainer } from '../../Cart';
 import { IAppState } from '../../../rootReducer';
 import { ProductListEmpty, ProductList, ProductLoading } from '../components';
-import { types } from '../actions';
+import { getProducts, toggleFavorites } from '../actions';
 import * as CartAction from '../../Cart/actions'
 import { setRoute } from '../../Shared/actions';
 import { Product } from '../../../models';
@@ -33,16 +33,16 @@ export function ProductContainer(props: IProductContainer = { isFavorites: false
 
 
     if (!fetched)
-      dispatch({ type: types.FETCH_PRODUCTS })
+      dispatch(getProducts())
   }, [dispatch, fetched, props])
 
   return (
     <div className="product-container row">
       <div className={`${props.isFavorites ? 'col-xs-12 product-list-wrapper' : 'col-xs-12 col-sm-12 col-md-8 product-list-wrapper'}`}>
         {!loading && !error && products.length > 0 && <ProductList
-         onFavoriteClick={(product: Product) => dispatch({ type: (product.favorite === 0 ? types.ADD_TO_FAVORITES : types.REMOVE_FROM_FAVORITES), payload: product })} 
+         onFavoriteClick={(product: Product) => dispatch(toggleFavorites(product))} 
          favorites={props.isFavorites} 
-         onAddToCart={(product: Product) => dispatch({ type: CartAction.types.ADD_TO_CART, payload: product })} 
+         onAddToCart={(product: Product) => dispatch(CartAction.addToCart(product))} 
          products={products} />}
         {!loading && !error && products.length === 0 && <ProductListEmpty />}
         {!error && loading && <ProductLoading />}
