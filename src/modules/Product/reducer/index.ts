@@ -1,7 +1,7 @@
 import { Product, Action } from "../../../models";
 import { types } from "../actions";
 import * as CartActions from '../../Cart/actions';
-import { ProductList } from "../components";
+
 export interface IProductState {
   productList: Product[];
   loading: boolean;
