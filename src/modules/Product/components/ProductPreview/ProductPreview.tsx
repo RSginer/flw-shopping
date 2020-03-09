@@ -22,7 +22,7 @@ export function ProductPreview(props: IProductPreview) {
           <span className="product-name">{props.product.productName}</span>
           <div className="product-body-bottom">
             <span className="product-price">{props.product.price}</span>
-            <button className="add-to-cart" disabled={props.product.stock === 0} onClick={() => props.onAddToCart(props.product)}><PlusCircle size={18} /> Add to cart</button>
+            <button className="add-to-cart" disabled={props.product ? props.product.stock ? props.product.stock <= 0 : true : true} onClick={() => props.onAddToCart(props.product)}><PlusCircle size={18} /> Add to cart</button>
           </div>
         </div>
       </div>

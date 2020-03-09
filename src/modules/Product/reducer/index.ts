@@ -21,20 +21,24 @@ export const productReducer = (state: IProductState = {
     case types.FETCH_PRODUCTS_ERROR:
       return { ...state, productList: [], loading: false, error: action.payload };
     case CartActions.types.ADD_TO_CART:
-      return addProductToCart(state, action)
+      return decreaseStock(state, action)
+    case types.DECREASE_STOCK_ERROR:
+      return increaseStock(state, action)
+    case types.INCREASE_STOCK_ERROR:
+      return decreaseStock(state, action)
     case CartActions.types.REMOVE_FROM_CART:
-      return removeProductFromCart(state, action)
+      return increaseStock(state, action)
     default:
       return state
   }
 }
 
-function addProductToCart(state: IProductState, action: Action): IProductState {
+function increaseStock(state: IProductState, action: Action): IProductState {
   const product = state.productList.find((p: Product) => p.id === action.payload.id);
 
   if (product) {
-    if (product.stock && product?.stock > 0) {
-      product.stock--;
+    if (product.stock) {
+      product.stock++;
     }
 
     return { ...state, productList: [...state.productList, product] }
@@ -43,12 +47,12 @@ function addProductToCart(state: IProductState, action: Action): IProductState {
   return state;
 }
 
-function removeProductFromCart(state: IProductState, action: Action): IProductState {
+function decreaseStock(state: IProductState, action: Action): IProductState {
   const product = state.productList.find((p: Product) => p.id === action.payload.id);
 
   if (product) {
     if (product.stock !== undefined) {
-      product.stock++;
+      product.stock--;
     }
 
     return { ...state, productList: [...state.productList, product] }

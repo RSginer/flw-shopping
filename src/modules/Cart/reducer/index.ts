@@ -1,6 +1,7 @@
 import { Action, Order } from "../../../models";
 import { types } from "../actions/types";
-import { addToCart } from "../actions";
+
+import * as ProductTypes from '../../Product/actions/types';
 
 export interface ICartState {
   orders: Order[];
@@ -14,6 +15,10 @@ export const cartReducer = (state: ICartState = {
       return addProductToCart(state, action);
     case types.REMOVE_FROM_CART:
       return removeProductFromCart(state, action);
+    case ProductTypes.types.DECREASE_STOCK_ERROR:
+      return removeProductFromCart(state, action);
+    case ProductTypes.types.INCREASE_STOCK_ERROR:
+      return addProductToCart(state, action);
     default:
       return state
   }
