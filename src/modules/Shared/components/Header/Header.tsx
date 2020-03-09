@@ -34,10 +34,10 @@ export function Header() {
         </div>
         <h1 className="app-title">{title}</h1>
         <div className="cart-icon">
-          {showCartIcon && <span className={showCartIcon && !favoritesButton ? '' : "hidden-md hidden-lg"} onClick={() => dispatch(push('/cart'))}>
+          <span onClick={() => dispatch(push('/cart'))}>
               <ShoppingCart size={25} />
               <span className="items-in-cart-count">{getTotalQuantity(orders)}</span>
-          </span>}
+          </span>
         </div>
       </div>
     </div>
