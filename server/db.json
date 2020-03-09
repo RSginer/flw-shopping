@@ -3,7 +3,7 @@
     {
       "id": "41fd4fd9-95c7-4809-96db-a147d352fdbb",
       "image_url": "https://dummyimage.com/400x400/28200e/000&text=Unbranded Metal Chair",
-      "stock": 28,
+      "stock": 27,
       "productName": "Unbranded Metal Chair",
       "price": 43,
       "productDescription": "Porro tempore autem. Sunt molestias qui quod recusandae nemo quia optio. Nostrum aperiam officiis aut reprehenderit illo.",
@@ -12,7 +12,7 @@
     {
       "id": "20cc33f1-223b-4cf0-878d-fdedb3f60b56",
       "image_url": "https://dummyimage.com/400x400/2ee9f7/000&text=Handcrafted Metal Towels",
-      "stock": 10,
+      "stock": 9,
       "productName": "Handcrafted Metal Towels",
       "price": 98,
       "productDescription": "Rerum minima laudantium blanditiis dolorem dolores ut sint ut quidem. Est doloremque repellat excepturi dolor consequatur rerum qui. Facere ut vel et enim accusamus ipsum dolores aut. Eaque quo ut omnis unde quam error voluptas non iure.",
@@ -21,7 +21,7 @@
     {
       "id": "ab284424-8e46-4a3e-8e13-e179b0ab8bb5",
       "image_url": "https://dummyimage.com/400x400/4de5d5/000&text=Awesome Cotton Soap",
-      "stock": 43,
+      "stock": 41,
       "productName": "Awesome Cotton Soap",
       "price": 66,
       "productDescription": "Molestias sunt quia omnis reprehenderit quia. Iste quia et similique voluptate. Et sit molestias.",
@@ -30,7 +30,7 @@
     {
       "id": "c34287bf-9cb7-40a7-ad07-6534e45a6868",
       "image_url": "https://dummyimage.com/400x400/bc27b5/000&text=Gorgeous Frozen Chair",
-      "stock": 22,
+      "stock": 19,
       "productName": "Gorgeous Frozen Chair",
       "price": 47,
       "productDescription": "Harum modi sunt. Voluptatem ut molestiae consequatur. Ea omnis architecto laboriosam accusantium reiciendis corporis exercitationem ad dolor. Fugit autem placeat voluptas sint aut aliquam sed. Totam fuga nesciunt rerum voluptatibus. Voluptatibus voluptates vel ut et temporibus perferendis laboriosam accusamus.",
@@ -66,7 +66,7 @@
     {
       "id": "7eca1ea3-0bf6-4b00-bb6b-e08ba834dd4e",
       "image_url": "https://dummyimage.com/400x400/6b90de/000&text=Rustic Soft Table",
-      "stock": 48,
+      "stock": 46,
       "productName": "Rustic Soft Table",
       "price": 49,
       "productDescription": "Exercitationem iure quia officiis sed hic illo iusto vero maxime. Fuga iste quia nemo. Officiis nihil veritatis doloremque in praesentium sit autem fugit.",
@@ -102,7 +102,7 @@
     {
       "id": "ea46848e-f2fe-4d8f-a0b2-c30c0f1d2417",
       "image_url": "https://dummyimage.com/400x400/f02ef0/000&text=Tasty Wooden Car",
-      "stock": 10,
+      "stock": 8,
       "productName": "Tasty Wooden Car",
       "price": 90,
       "productDescription": "Voluptatibus quia est eveniet consequatur est veritatis. Esse ex sapiente. Consequatur numquam quam assumenda vel. Itaque non consectetur sed doloribus perspiciatis. Corporis officiis deserunt.",
@@ -111,7 +111,7 @@
     {
       "id": "031806fb-89b6-4790-a889-5c0fa94d380a",
       "image_url": "https://dummyimage.com/400x400/513c52/000&text=Handcrafted Granite Pants",
-      "stock": 25,
+      "stock": 24,
       "productName": "Handcrafted Granite Pants",
       "price": 4,
       "productDescription": "Impedit nihil dolorem. Illum reprehenderit sit. Doloribus quo reprehenderit beatae est vero. Expedita ut praesentium. Incidunt quisquam a dolore a animi. Voluptas molestiae aut fuga.",
@@ -120,7 +120,7 @@
     {
       "id": "9dbcefef-804d-483d-8e1c-28941866a85c",
       "image_url": "https://dummyimage.com/400x400/8100ab/000&text=Practical Granite Shoes",
-      "stock": 29,
+      "stock": 28,
       "productName": "Practical Granite Shoes",
       "price": 45,
       "productDescription": "Quasi omnis soluta veniam a in explicabo. Ex doloremque et est aut distinctio aliquam rerum recusandae. Earum in dignissimos odit quia ut. Qui laudantium amet.",
@@ -129,7 +129,7 @@
     {
       "id": "1b1caaba-60e2-432b-97f8-d7c8f8f94bbc",
       "image_url": "https://dummyimage.com/400x400/d8a4c7/000&text=Handmade Granite Cheese",
-      "stock": 45,
+      "stock": 44,
       "productName": "Handmade Granite Cheese",
       "price": 95,
       "productDescription": "Aut fuga fugiat qui distinctio nihil qui eum voluptate. Et nostrum aut ut ducimus praesentium eum odio voluptatem. Eos nemo sunt iste. Iste cupiditate soluta amet quod ut quae iure velit. Veritatis occaecati eos magni ut. Quibusdam eos reprehenderit illo voluptatem.",
@@ -237,7 +237,7 @@
     {
       "id": "cd8e7faa-aff2-4f10-8b7a-3230bc741086",
       "image_url": "https://dummyimage.com/400x400/f3b56c/000&text=Ergonomic Cotton Chicken",
-      "stock": 15,
+      "stock": 14,
       "productName": "Ergonomic Cotton Chicken",
       "price": 53,
       "productDescription": "Ad sunt atque quisquam corrupti consequatur rerum. Temporibus vero et possimus laboriosam iste deleniti. Sunt sint tenetur nemo hic vel. Accusantium eum accusamus. Et iusto officiis.",
@@ -246,7 +246,7 @@
     {
       "id": "27e066ab-9766-46ee-abf4-934adebde3a4",
       "image_url": "https://dummyimage.com/400x400/c3a6a4/000&text=Gorgeous Fresh Pizza",
-      "stock": 36,
+      "stock": 35,
       "productName": "Gorgeous Fresh Pizza",
       "price": 37,
       "productDescription": "Et aut eius veniam ipsum officiis corrupti. Repellendus pariatur suscipit qui est sint. Dolore et maxime. Vel eos unde sed quasi at consequatur incidunt. Corrupti voluptates quibusdam optio atque cum cum alias reiciendis. Ducimus quos amet voluptatem voluptatem.",

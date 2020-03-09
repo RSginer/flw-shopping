@@ -34,7 +34,7 @@ function addProductToCart(state: ICartState, action: Action): ICartState {
     action.payload.stock > 0 && orders.push(new Order(action.payload, 1));
   }
 
-  return { ...state, orders: [...orders] };
+  return { ...state, orders: [...orders.reverse()] };
 }
 
 function removeProductFromCart(state: ICartState, action: Action): ICartState {
