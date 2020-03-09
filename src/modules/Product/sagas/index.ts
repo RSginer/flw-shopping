@@ -1,6 +1,5 @@
 import { put, takeEvery, call } from 'redux-saga/effects';
 import { types, fetchProducts } from '../actions';
-import { Action } from '../../../models';
 
 function* getProducts() {
   try {
