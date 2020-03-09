@@ -14,7 +14,6 @@ export function Header() {
   const backButton = useSelector((s: IAppState) => s.shared.backButton)
   const favoritesButton = useSelector((s: IAppState) => s.shared.favoritesButton)
   const title = useSelector((s: IAppState) => s.shared.title)
-  const showCartIcon = useSelector((s: IAppState) => s.shared.showCartIcon)
   const orders = useSelector((s: IAppState) => s.cart.orders)
 
   function getTotalQuantity(orders: Order[]): number {

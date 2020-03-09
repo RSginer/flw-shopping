@@ -34,7 +34,7 @@
       "productName": "Gorgeous Frozen Chair",
       "price": 47,
       "productDescription": "Harum modi sunt. Voluptatem ut molestiae consequatur. Ea omnis architecto laboriosam accusantium reiciendis corporis exercitationem ad dolor. Fugit autem placeat voluptas sint aut aliquam sed. Totam fuga nesciunt rerum voluptatibus. Voluptatibus voluptates vel ut et temporibus perferendis laboriosam accusamus.",
-      "favorite": "1"
+      "favorite": 0
     },
     {
       "id": "41fb4f07-22fd-4ef6-b23c-1ac022b57d11",
@@ -52,7 +52,7 @@
       "productName": "Fantastic Wooden Sausages",
       "price": 1,
       "productDescription": "Ea qui et. Minus minima omnis. Nisi temporibus quam vel doloribus tempore ut possimus repellendus minus. Aut et repudiandae et dolorum ut consectetur. Qui laborum tenetur corporis odit architecto. Rerum neque odit.",
-      "favorite": "1"
+      "favorite": 0
     },
     {
       "id": "1db18081-575b-47b2-b0d8-395314a6b327",
@@ -61,7 +61,7 @@
       "productName": "Gorgeous Rubber Salad",
       "price": 62,
       "productDescription": "Officiis facilis dignissimos dolores numquam. Quidem soluta et. Quis est eveniet rem aut aut. Perferendis reprehenderit repellat sunt magni consequuntur quas. Enim aut minus voluptate explicabo neque voluptatem quas.",
-      "favorite": "1"
+      "favorite": 0
     },
     {
       "id": "7eca1ea3-0bf6-4b00-bb6b-e08ba834dd4e",
@@ -70,7 +70,7 @@
       "productName": "Rustic Soft Table",
       "price": 49,
       "productDescription": "Exercitationem iure quia officiis sed hic illo iusto vero maxime. Fuga iste quia nemo. Officiis nihil veritatis doloremque in praesentium sit autem fugit.",
-      "favorite": "1"
+      "favorite": 0
     },
     {
       "id": "57483e83-1378-42f3-8d40-e4d75e4ff767",
