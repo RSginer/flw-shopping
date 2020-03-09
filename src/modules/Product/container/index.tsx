@@ -13,18 +13,19 @@ import { Product } from '../../../models';
 
 
 export interface IProductContainer {
-  favorites: boolean;
+  isFavorites: boolean;
 }
 
-export function ProductContainer(props: IProductContainer = { favorites: false }) {
+export function ProductContainer(props: IProductContainer = { isFavorites: false }) {
   const dispatch = useDispatch();
   const products = useSelector((s: IAppState) => s.product.productList)
   const loading = useSelector((s: IAppState) => s.product.loading)
   const error = useSelector((s: IAppState) => s.product.error)
   const fetched = useSelector((s: IAppState) => s.product.productsFetched)
+
   useEffect(() => {
 
-    if (!props.favorites) {
+    if (!props.isFavorites) {
       dispatch(setRoute(false, true, true, 'Shop 🛍'))
     } else {
       dispatch(setRoute(true, false, true, 'Favorites ❤️'))
@@ -37,17 +38,17 @@ export function ProductContainer(props: IProductContainer = { favorites: false }
 
   return (
     <div className="product-container row">
-      <div className={`${props.favorites ? 'col-xs-12 product-list-wrapper' : 'col-xs-12 col-sm-12 col-md-8 product-list-wrapper'}`}>
+      <div className={`${props.isFavorites ? 'col-xs-12 product-list-wrapper' : 'col-xs-12 col-sm-12 col-md-8 product-list-wrapper'}`}>
         {!loading && !error && products.length > 0 && <ProductList
          onFavoriteClick={(product: Product) => dispatch({ type: (product.favorite === 0 ? types.ADD_TO_FAVORITES : types.REMOVE_FROM_FAVORITES), payload: product })} 
-         favorites={props.favorites} 
+         favorites={props.isFavorites} 
          onAddToCart={(product: Product) => dispatch({ type: CartAction.types.ADD_TO_CART, payload: product })} 
          products={products} />}
         {!loading && !error && products.length === 0 && <ProductListEmpty />}
         {!error && loading && <ProductLoading />}
         {!loading && error && <div>{error.toJSON()}</div>}
       </div>
-      {!props.favorites && <div className="hidden-xs hidden-sm col-md-4 cart-container-wrapper">
+      {!props.isFavorites && <div className="hidden-xs hidden-sm col-md-4 cart-container-wrapper">
         <CartContainer setHeader={false} />
       </div>}
     </div>
