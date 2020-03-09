@@ -9,7 +9,7 @@ export interface IProductState {
 
 export const productReducer = (state: IProductState = {
   productList: [],
-  loading: false,
+  loading: true,
   error: null
 }, action: Action) => {
   switch (action.type) {
