@@ -5,6 +5,7 @@ import './index.scss';
 import { ICartState } from '../reducer';
 import { useSelector } from 'react-redux';
 import { IAppState } from '../../../rootReducer';
+import EmpryOrders from '../components/EmptyOrders/EmptyOrders';
 
 
 function CartContainer(props: ICartState) {
@@ -13,7 +14,8 @@ function CartContainer(props: ICartState) {
   return (
     <div className="cart">
       <div className="cart-orders-list">
-        {orders.map((o, i) => <OrderItem key={i} {...o} />)}
+        {orders.length > 0 && orders.map((o, i) => <OrderItem key={i} {...o} />)}
+        {orders.length === 0 && <EmpryOrders />}
       </div>
       <hr />
       <div className="cart-total-price">

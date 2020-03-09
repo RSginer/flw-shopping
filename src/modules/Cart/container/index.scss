@@ -17,6 +17,7 @@
   @include shadow;
 
   .cart-orders-list {
+    border: 1px dashed $light;
     border-radius: $borderRadius;
     overflow-y: auto;
     height: calc(80vh - (#{$baseSpacing} * 4) - #{$headerHeight});
