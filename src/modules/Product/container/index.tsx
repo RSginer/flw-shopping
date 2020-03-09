@@ -17,16 +17,18 @@ export function ProductContainer() {
   const products = useSelector((s: IAppState) => s.product.productList)
   const loading = useSelector((s: IAppState) => s.product.loading)
   const error = useSelector((s: IAppState) => s.product.error)
-
+  const fetched = useSelector((s: IAppState) => s.product.productsFetched)
   useEffect(() => {
     dispatch(setRoute(false, true, true, 'Shop 🛍'))
-    dispatch({ type: types.FETCH_PRODUCTS })
-  }, [dispatch])
+
+    if (!fetched)
+      dispatch({ type: types.FETCH_PRODUCTS })
+  }, [dispatch, fetched])
 
   return (
     <div className="product-container row">
       <div className="col-xs-12 col-sm-12 col-md-8 product-list-wrapper">
-        {!loading && !error && products.length > 0 && <ProductList onAddToCart={(product: Product) => dispatch({type: CartAction.types.ADD_TO_CART, payload: product})} products={products} />}
+        {!loading && !error && products.length > 0 && <ProductList onAddToCart={(product: Product) => dispatch({ type: CartAction.types.ADD_TO_CART, payload: product })} products={products} />}
         {!loading && !error && products.length === 0 && <ProductListEmpty />}
         {!error && loading && <ProductLoading />}
         {!loading && error && <div>{error.toJSON()}</div>}
