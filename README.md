@@ -61,4 +61,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 # Others of my React projects
  - [Idle Capitalist](https://github.com/RSginer/idle-capitalist)
- - [My Binge List](https://github.com/RSginer/react-binge-list)
+ - [My Binge List](https://github.com/RSginer/react-movie-binge-list)
