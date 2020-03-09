@@ -38,7 +38,11 @@ export function ProductContainer(props: IProductContainer = { favorites: false }
   return (
     <div className="product-container row">
       <div className={`${props.favorites ? 'col-xs-12 product-list-wrapper' : 'col-xs-12 col-sm-12 col-md-8 product-list-wrapper'}`}>
-        {!loading && !error && products.length > 0 && <ProductList favorites={props.favorites} onAddToCart={(product: Product) => dispatch({ type: CartAction.types.ADD_TO_CART, payload: product })} products={products} />}
+        {!loading && !error && products.length > 0 && <ProductList
+         onFavoriteClick={(product: Product) => dispatch({ type: (product.favorite === 0 ? types.ADD_TO_FAVORITES : types.REMOVE_FROM_FAVORITES), payload: product })} 
+         favorites={props.favorites} 
+         onAddToCart={(product: Product) => dispatch({ type: CartAction.types.ADD_TO_CART, payload: product })} 
+         products={products} />}
         {!loading && !error && products.length === 0 && <ProductListEmpty />}
         {!error && loading && <ProductLoading />}
         {!loading && error && <div>{error.toJSON()}</div>}

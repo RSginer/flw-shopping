@@ -7,21 +7,21 @@
       "productName": "Unbranded Metal Chair",
       "price": 43,
       "productDescription": "Porro tempore autem. Sunt molestias qui quod recusandae nemo quia optio. Nostrum aperiam officiis aut reprehenderit illo.",
-      "favorite": "1"
+      "favorite": 0
     },
     {
       "id": "20cc33f1-223b-4cf0-878d-fdedb3f60b56",
       "image_url": "https://dummyimage.com/400x400/2ee9f7/000&text=Handcrafted Metal Towels",
-      "stock": 1,
+      "stock": 0,
       "productName": "Handcrafted Metal Towels",
       "price": 98,
       "productDescription": "Rerum minima laudantium blanditiis dolorem dolores ut sint ut quidem. Est doloremque repellat excepturi dolor consequatur rerum qui. Facere ut vel et enim accusamus ipsum dolores aut. Eaque quo ut omnis unde quam error voluptas non iure.",
-      "favorite": 0
+      "favorite": "1"
     },
     {
       "id": "ab284424-8e46-4a3e-8e13-e179b0ab8bb5",
       "image_url": "https://dummyimage.com/400x400/4de5d5/000&text=Awesome Cotton Soap",
-      "stock": 19,
+      "stock": 14,
       "productName": "Awesome Cotton Soap",
       "price": 66,
       "productDescription": "Molestias sunt quia omnis reprehenderit quia. Iste quia et similique voluptate. Et sit molestias.",
@@ -52,7 +52,7 @@
       "productName": "Fantastic Wooden Sausages",
       "price": 1,
       "productDescription": "Ea qui et. Minus minima omnis. Nisi temporibus quam vel doloribus tempore ut possimus repellendus minus. Aut et repudiandae et dolorum ut consectetur. Qui laborum tenetur corporis odit architecto. Rerum neque odit.",
-      "favorite": 0
+      "favorite": "1"
     },
     {
       "id": "1db18081-575b-47b2-b0d8-395314a6b327",
@@ -8998,7 +8998,7 @@
       "productName": "Refined Cotton Pants",
       "price": 39,
       "productDescription": "Dolore quia et aliquid aut quia suscipit optio molestiae. Dolor magnam minima eos. Eos laborum sit dolores.",
-      "favorite": "1"
+      "favorite": 0
     }
   ]
 }

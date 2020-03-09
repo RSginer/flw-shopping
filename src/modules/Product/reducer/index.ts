@@ -30,15 +30,32 @@ export const productReducer = (state: IProductState = {
       return decreaseStock(state, action)
     case CartActions.types.REMOVE_FROM_CART:
       return increaseStock(state, action)
+    case types.ADD_TO_FAVORITES_SUCCESS:
+      return toggleFavorite(state, action)
+    case types.REMOVE_FROM_FAVORITES_SUCCESS:
+      return toggleFavorite(state, action)
     default:
       return state
   }
 }
 
+function toggleFavorite(state: IProductState, action: Action): IProductState {
+  const index = state.productList.findIndex((p: Product) => p.id === action.payload.id);
+  let product = state.productList[index];
+
+  
+
+  product.favorite = action.payload.favorite
+
+  product = {...product};
+
+  return { ...state, productList: [...state.productList] };
+}
+
 function increaseStock(state: IProductState, action: Action): IProductState {
   const index = state.productList.findIndex((p: Product) => p.id === action.payload.id);
   let product = state.productList[index];
-  
+
   if (product) {
     if (product.stock !== undefined) {
       product.stock++;
@@ -63,7 +80,7 @@ function decreaseStock(state: IProductState, action: Action): IProductState {
     }
 
     product = Object.assign({}, product);
-  
+
     return { ...state, productList: [...state.productList] }
   }
 

@@ -9,6 +9,7 @@ export interface IProductList {
   products: Product[];
   favorites: boolean;
   onAddToCart: Function;
+  onFavoriteClick: Function;
 }
 
 export function ProductList(props: IProductList) {
@@ -21,7 +22,7 @@ export function ProductList(props: IProductList) {
   return (
     <div className="product-list">
       <div className="list row col-xs-12">
-        {products.map((product: Product, i) => <ProductPreview favorites={props.favorites} onAddToCart={props.onAddToCart} key={i} product={product} />)}
+        {products.map((product: Product, i) => <ProductPreview onFavoriteClick={props.onFavoriteClick} favorites={props.favorites} onAddToCart={props.onAddToCart} key={i} product={product} />)}
       </div>
     </div>
   );

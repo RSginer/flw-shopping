@@ -4,7 +4,7 @@ import { routerMiddleware } from 'connected-react-router';
 import createRootReducer from './rootReducer';
 import createSagaMiddleware from 'redux-saga';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { getProductsSaga, decreaseStockSaga, increaseStockSaga } from './modules/Product';
+import { getProductsSaga, decreaseStockSaga, increaseStockSaga, addToFavoritesSaga, removeFromFavoritesSaga } from './modules/Product';
 
 export const history = createBrowserHistory()
 
@@ -39,5 +39,7 @@ const store = configureStore()
 sagaMiddleware.run(getProductsSaga)
 sagaMiddleware.run(decreaseStockSaga)
 sagaMiddleware.run(increaseStockSaga)
+sagaMiddleware.run(addToFavoritesSaga)
+sagaMiddleware.run(removeFromFavoritesSaga)
 
 export default store;
