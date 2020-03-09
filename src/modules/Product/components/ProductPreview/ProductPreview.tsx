@@ -5,19 +5,24 @@ import { PlusCircle } from 'react-feather';
 import { FavoriteHeart } from '../../components';
 import { Product } from '../../../../models';
 
-export function ProductPreview(props: Product) {
+export interface IProductPreview {
+  product: Product;
+  onAddToCart: Function;
+}
+
+export function ProductPreview(props: IProductPreview) {
   return (
     <div className="product-preview col-xs-6 col-sm-4 col-lg-3">
       <div className="product-preview-content">
-        <div className="product-image" style={{ backgroundImage: `url('${props.image_url}'` }}>
-          <FavoriteHeart isFavorite={props.favorite !== 0} />
-          <span className="stock-label">{props.stock} in stock</span>
+        <div className="product-image" style={{ backgroundImage: `url('${props.product.image_url}'` }}>
+          <FavoriteHeart isFavorite={props.product.favorite !== 0} />
+          <span className="stock-label">{props.product.stock} in stock</span>
         </div>
         <div className="product-body">
-          <span className="product-name">{props.productName}</span>
+          <span className="product-name">{props.product.productName}</span>
           <div className="product-body-bottom">
-            <span className="product-price">{props.price}</span>
-            <button className="add-to-cart"><PlusCircle size={18} /> Add to cart</button>
+            <span className="product-price">{props.product.price}</span>
+            <button className="add-to-cart" onClick={() => props.onAddToCart(props.product)}><PlusCircle size={18} /> Add to cart</button>
           </div>
         </div>
       </div>

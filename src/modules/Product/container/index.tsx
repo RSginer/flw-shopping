@@ -7,7 +7,9 @@ import { CartContainer } from '../../Cart';
 import { IAppState } from '../../../rootReducer';
 import { ProductListEmpty, ProductList, ProductLoading } from '../components';
 import { types } from '../actions';
+import * as CartAction from '../../Cart/actions'
 import { setRoute } from '../../Common/actions';
+import { Product } from '../../../models';
 
 
 export function ProductContainer() {
@@ -24,7 +26,7 @@ export function ProductContainer() {
   return (
     <div className="product-container row">
       <div className="col-xs-12 col-sm-12 col-md-8 product-list-wrapper">
-        {!loading && !error && products.length > 0 && <ProductList products={products} />}
+        {!loading && !error && products.length > 0 && <ProductList onAddToCart={(product: Product) => dispatch({type: CartAction.types.ADD_TO_CART, payload: product})} products={products} />}
         {!loading && !error && products.length === 0 && <ProductListEmpty />}
         {!error && loading && <ProductLoading />}
         {!loading && error && <div>{error.toJSON()}</div>}
