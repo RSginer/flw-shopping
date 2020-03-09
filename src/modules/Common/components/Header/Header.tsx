@@ -18,14 +18,14 @@ export function Header() {
   return (
     <div className="header">
       <div className="container-fluid header-content">
-        <div className="favorites">
-          {favoritesButton && <FavoriteHeart isFavorite={true} />}
-          {backButton && <ArrowLeft onClick={() => dispatch(push('/'))} size={20} />}
+        <div className="left-icons">
+          {favoritesButton && <span className="favorite-icon"><FavoriteHeart isFavorite={true} /></span>}
+          {backButton && <ArrowLeft onClick={() => dispatch(push('/'))} size={25} />}
         </div>
         <h1 className="app-title">{title}</h1>
         <div className="cart-icon">
           {showCartIcon && <span className="hidden-md hidden-lg" onClick={() => dispatch(push('/cart'))}>
-              <ShoppingCart size={20} />
+              <ShoppingCart size={25} />
           </span>}
         </div>
       </div>

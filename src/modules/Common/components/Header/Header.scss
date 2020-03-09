@@ -24,10 +24,10 @@
       font-size: 1.2em;
     }
 
-    .favorites {
+    .left-icons {
       cursor: pointer;
       position: relative;
-      svg {
+      .favorite-icon svg {
         fill: red;
       }
 
@@ -36,17 +36,6 @@
     .cart-icon {
       cursor: pointer;
       position: relative;
-
-      span {
-        &::before {
-          content: 'Cart';
-          position: absolute;
-          font-size: 0.8em;
-          width: 150px;
-          left: -30px;
-        }
-      }
- 
     }
   }
 
