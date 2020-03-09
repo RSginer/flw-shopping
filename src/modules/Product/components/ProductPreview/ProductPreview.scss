@@ -71,13 +71,10 @@
           }
 
           &:disabled {
-            background: $light;
-            color: white;
-            border-color: white;
-            cursor: not-allowed;
+            @include disabled-btn;
           }
         }
-  
+
         .product-price {
           @include product-price($secondary)
         }
@@ -104,13 +101,15 @@
 
 @media only screen and (max-width: $bp-large) {
   .product-preview {
-    
+
     .product-preview-content {
 
       .product-body {
         text-align: right;
+
         .product-body-bottom {
           display: block;
+
           button.add-to-cart {
             font-size: 0.55em;
             width: 100%;

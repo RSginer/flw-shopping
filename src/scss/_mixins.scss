@@ -81,3 +81,10 @@
     background: transparent;
   }
 }
+
+@mixin disabled-btn {
+  background: $light;
+  color: white;
+  border-color: white;
+  cursor: not-allowed;
+}

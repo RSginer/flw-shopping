@@ -59,8 +59,7 @@
     cursor: pointer;
 
     &:disabled {
-      background: $light;
-      cursor: not-allowed;
+      @include disabled-btn;
     }
   }
 }
