@@ -3,7 +3,7 @@
     {
       "id": "41fd4fd9-95c7-4809-96db-a147d352fdbb",
       "image_url": "https://dummyimage.com/400x400/28200e/000&text=Unbranded Metal Chair",
-      "stock": 17,
+      "stock": 16,
       "productName": "Unbranded Metal Chair",
       "price": 43,
       "productDescription": "Porro tempore autem. Sunt molestias qui quod recusandae nemo quia optio. Nostrum aperiam officiis aut reprehenderit illo.",
@@ -16,16 +16,16 @@
       "productName": "Handcrafted Metal Towels",
       "price": 98,
       "productDescription": "Rerum minima laudantium blanditiis dolorem dolores ut sint ut quidem. Est doloremque repellat excepturi dolor consequatur rerum qui. Facere ut vel et enim accusamus ipsum dolores aut. Eaque quo ut omnis unde quam error voluptas non iure.",
-      "favorite": 0
+      "favorite": "1"
     },
     {
       "id": "ab284424-8e46-4a3e-8e13-e179b0ab8bb5",
       "image_url": "https://dummyimage.com/400x400/4de5d5/000&text=Awesome Cotton Soap",
-      "stock": 6,
+      "stock": 5,
       "productName": "Awesome Cotton Soap",
       "price": 66,
       "productDescription": "Molestias sunt quia omnis reprehenderit quia. Iste quia et similique voluptate. Et sit molestias.",
-      "favorite": 0
+      "favorite": "1"
     },
     {
       "id": "c34287bf-9cb7-40a7-ad07-6534e45a6868",
@@ -34,7 +34,7 @@
       "productName": "Gorgeous Frozen Chair",
       "price": 47,
       "productDescription": "Harum modi sunt. Voluptatem ut molestiae consequatur. Ea omnis architecto laboriosam accusantium reiciendis corporis exercitationem ad dolor. Fugit autem placeat voluptas sint aut aliquam sed. Totam fuga nesciunt rerum voluptatibus. Voluptatibus voluptates vel ut et temporibus perferendis laboriosam accusamus.",
-      "favorite": 0
+      "favorite": "1"
     },
     {
       "id": "41fb4f07-22fd-4ef6-b23c-1ac022b57d11",
@@ -61,7 +61,7 @@
       "productName": "Gorgeous Rubber Salad",
       "price": 62,
       "productDescription": "Officiis facilis dignissimos dolores numquam. Quidem soluta et. Quis est eveniet rem aut aut. Perferendis reprehenderit repellat sunt magni consequuntur quas. Enim aut minus voluptate explicabo neque voluptatem quas.",
-      "favorite": 0
+      "favorite": "1"
     },
     {
       "id": "7eca1ea3-0bf6-4b00-bb6b-e08ba834dd4e",
@@ -70,7 +70,7 @@
       "productName": "Rustic Soft Table",
       "price": 49,
       "productDescription": "Exercitationem iure quia officiis sed hic illo iusto vero maxime. Fuga iste quia nemo. Officiis nihil veritatis doloremque in praesentium sit autem fugit.",
-      "favorite": 0
+      "favorite": "1"
     },
     {
       "id": "57483e83-1378-42f3-8d40-e4d75e4ff767",
@@ -93,7 +93,7 @@
     {
       "id": "7ac6d979-0771-4b8c-809d-eb8aa36be7f4",
       "image_url": "https://dummyimage.com/400x400/61cc38/000&text=Awesome Plastic Towels",
-      "stock": 2,
+      "stock": 0,
       "productName": "Awesome Plastic Towels",
       "price": 93,
       "productDescription": "Earum voluptates animi excepturi sed dolor nemo. Ab sed magnam modi saepe et est optio dolorum. Eum pariatur dolor voluptatibus. Ut magnam omnis. Culpa nisi provident cumque libero.",
