@@ -33,7 +33,7 @@ export function ProductContainer(props: IProductContainer = { isFavorites: false
 
 
     if (!fetched)
-      dispatch({ type: types.FETCH_PRODUCTS, payload: props.isFavorites })
+      dispatch({ type: types.FETCH_PRODUCTS })
   }, [dispatch, fetched, props])
 
   return (
