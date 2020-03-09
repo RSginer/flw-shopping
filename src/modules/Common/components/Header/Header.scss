@@ -38,6 +38,15 @@
     .cart-icon {
       cursor: pointer;
       position: relative;
+
+      .items-in-cart-count {
+        padding: $baseSpacing / 4;
+        font-size: 0.6em;
+        border-radius: $borderRadius;
+        font-weight: bold;
+        position: absolute;
+        margin-left: $baseSpacing / 2;
+      }
     }
   }
 
