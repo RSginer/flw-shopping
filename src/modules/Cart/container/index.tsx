@@ -39,7 +39,9 @@ export function CartContainer(props: ICartContainer = { setHeader: true }) {
     <div className="cart">
       <div className="cart-orders-list">
         {orders.length > 0 && orders.map((o, i) => <OrderItem key={i} 
-        onIncrease={() => dispatch(addToCart(o.product))} 
+        onIncrease={() => {
+          o.product.stock && o.product.stock > 0 && dispatch(addToCart(o.product))
+        }} 
         onDecrease={() => dispatch(removeFromCart(o.product))} order={o} />)}
         {orders.length === 0 && <EmptyOrders />}
       </div>

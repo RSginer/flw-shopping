@@ -102,7 +102,7 @@
     {
       "id": "ea46848e-f2fe-4d8f-a0b2-c30c0f1d2417",
       "image_url": "https://dummyimage.com/400x400/f02ef0/000&text=Tasty Wooden Car",
-      "stock": 8,
+      "stock": -1,
       "productName": "Tasty Wooden Car",
       "price": 90,
       "productDescription": "Voluptatibus quia est eveniet consequatur est veritatis. Esse ex sapiente. Consequatur numquam quam assumenda vel. Itaque non consectetur sed doloribus perspiciatis. Corporis officiis deserunt.",
