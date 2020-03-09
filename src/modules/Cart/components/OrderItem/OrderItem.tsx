@@ -19,7 +19,7 @@ export function OrderItem(props: IOrderItem) {
         <span className="order-title">{props.order.product.productName}</span>
         <InputNumber onIncrease={props.onIncrease} onDecrease={props.onDecrease} value={props.order.quantity} max={props.order.product.stock || 1} />
       </div>
-      <div className="order-price">{props.order.product.price}</div>
+      <div className="order-price">{(props.order.product && props.order.product.price && props.order.product.price * props.order.quantity)}</div>
     </div>
   );
 }
