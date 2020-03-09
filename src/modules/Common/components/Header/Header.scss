@@ -45,6 +45,8 @@
         border-radius: $borderRadius;
         font-weight: bold;
         position: absolute;
+        left: $baseSpacing * -2;
+        top: 0;
         margin-left: $baseSpacing / 2;
       }
     }
