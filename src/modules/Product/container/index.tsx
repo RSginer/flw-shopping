@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import './index.scss';
 import ProductList from '../components/ProductList/ProductList';
-import CartContainer from '../../Cart/container';
+import { CartContainer } from '../../Cart';
 import { IAppState } from '../../../rootReducer';
 import ProductListEmpty from '../components/ProductListEmpty/ProductListEmpty';
 

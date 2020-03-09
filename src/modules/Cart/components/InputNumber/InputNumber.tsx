@@ -4,7 +4,7 @@ import { Plus, Minus } from 'react-feather';
 
 import './InputNumber.scss';
 
-function InputNumber(props: any) {
+export function InputNumber(props: any) {
   return (
     <div className="input-number">
       <Plus size={15} />
@@ -13,5 +13,3 @@ function InputNumber(props: any) {
     </div>
   );
 }
-
-export default InputNumber;

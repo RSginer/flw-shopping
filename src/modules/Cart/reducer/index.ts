@@ -4,7 +4,7 @@ export interface ICartState {
   orders: Order[];
 }
 
-export default (state: ICartState = {
+export const cartReducer = (state: ICartState = {
   orders: []
 }, action: Action) => {
   switch (action.type) {

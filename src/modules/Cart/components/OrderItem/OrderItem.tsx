@@ -1,10 +1,10 @@
 import React from 'react';
 import { Order } from '../../../../models/Order';
-import InputNumber from '../InputNumber/InputNumber';
+import { InputNumber } from '../InputNumber/InputNumber';
 
 import './OrderItem.scss';
 
-function OrderItem(props: Order) {
+export function OrderItem(props: Order) {
   return (
     <div className="order-item">
       <div className="order-product-image" style={{backgroundImage: `url('${props.product.image_url}')`}}></div>
@@ -16,5 +16,3 @@ function OrderItem(props: Order) {
     </div>
   );
 }
-
-export default OrderItem;

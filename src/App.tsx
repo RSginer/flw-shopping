@@ -6,7 +6,7 @@ import { ConnectedRouter } from 'connected-react-router';
 import { history } from './createStore';
 import { Route, Switch } from "react-router-dom";
 import ProductContainer from './modules/Product/container';
-import CartContainer from './modules/Cart/container';
+import { CartContainer } from './modules/Cart';
 import Header from './modules/Header/components/Header';
 
 

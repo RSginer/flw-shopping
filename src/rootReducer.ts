@@ -4,7 +4,7 @@ import { History } from 'history';
 import product, { IProductState } from './modules/Product/reducer';
 import { ICartState } from './modules/Cart/reducer';
 
-import cart from './modules/Cart/reducer';
+import { cartReducer } from './modules/Cart';
 
 export interface IAppState {
   cart: ICartState;
@@ -13,7 +13,7 @@ export interface IAppState {
 }
 
 export default (history: History) => combineReducers({
-  cart,
+  cart: cartReducer,
   product,
   router: connectRouter(history)
 })

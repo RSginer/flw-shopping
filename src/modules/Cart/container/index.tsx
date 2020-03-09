@@ -1,20 +1,22 @@
 import React from 'react';
-import OrderItem from '../components/OrderItem/OrderItem';
+import { useSelector } from 'react-redux';
 
 import './index.scss';
-import { useSelector } from 'react-redux';
+
 import { IAppState } from '../../../rootReducer';
-import EmpryOrders from '../components/EmptyOrders/EmptyOrders';
+import { EmptyOrders } from '../components/EmptyOrders/EmptyOrders';
+import { OrderItem } from '../components/OrderItem/OrderItem';
 
 
-function CartContainer() {
+export function CartContainer() {
 
-  const orders = useSelector((s: IAppState) => s.cart.orders)
+  const orders = useSelector((s: IAppState) => s.cart.orders);
+
   return (
     <div className="cart">
       <div className="cart-orders-list">
         {orders.length > 0 && orders.map((o, i) => <OrderItem key={i} {...o} />)}
-        {orders.length === 0 && <EmpryOrders />}
+        {orders.length === 0 && <EmptyOrders />}
       </div>
       <hr />
       {orders.length > 0 && <div className="cart-total-price">
@@ -25,5 +27,3 @@ function CartContainer() {
     </div>
   );
 }
-
-export default CartContainer;
