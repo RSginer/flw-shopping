@@ -7,6 +7,7 @@ import { IAppState } from '../../../rootReducer';
 import { EmptyOrders } from '../components/EmptyOrders/EmptyOrders';
 import { OrderItem } from '../components/OrderItem/OrderItem';
 import { setRoute } from '../../Common/actions';
+import { Order } from '../../../models';
 
 
 export interface ICartContainer {
@@ -16,6 +17,18 @@ export interface ICartContainer {
 export function CartContainer(props: ICartContainer = { setHeader: true }) {
   const dispatch = useDispatch();
   const orders = useSelector((s: IAppState) => s.cart.orders);
+
+  function getTotalAmount(orders: Order[]): number {
+    let totalAmount = 0;
+
+    orders.map((o: Order) => {
+      if (o.product && o.product.price) {
+        totalAmount += o.product.price * o.quantity;
+      }
+    })
+
+    return totalAmount;
+  }
 
   useEffect(() => {
     if (props.setHeader) {
@@ -32,7 +45,7 @@ export function CartContainer(props: ICartContainer = { setHeader: true }) {
       <hr />
       {orders.length > 0 && <div className="cart-total-price">
         <span className="total-label">Total Amount</span>
-        <span className="total-label-amount">10000</span>
+        <span className="total-label-amount">{getTotalAmount(orders)}</span>
       </div>}
       <button disabled={orders.length === 0} className="checkout-button">Make a payment</button>
     </div>
