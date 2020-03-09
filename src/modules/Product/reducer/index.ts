@@ -43,8 +43,6 @@ function toggleFavorite(state: IProductState, action: Action): IProductState {
   const index = state.productList.findIndex((p: Product) => p.id === action.payload.id);
   let product = state.productList[index];
 
-  
-
   product.favorite = action.payload.favorite
 
   product = {...product};
@@ -61,7 +59,7 @@ function increaseStock(state: IProductState, action: Action): IProductState {
       product.stock++;
     }
 
-    product = Object.assign({}, product);
+    product = {...product};
 
 
     return { ...state, productList: [...state.productList] }
@@ -79,7 +77,7 @@ function decreaseStock(state: IProductState, action: Action): IProductState {
       product.stock--;
     }
 
-    product = Object.assign({}, product);
+    product = {...product};
 
     return { ...state, productList: [...state.productList] }
   }
