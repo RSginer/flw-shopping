@@ -2,7 +2,7 @@
 
 @mixin background-grandient-darken($bgColor, $darkenPercent) {
   background: $bgColor;
-  background: linear-gradient(90deg, $bgColor 0%, darken($bgColor, $darkenPercent) 50%);
+  background: linear-gradient(90deg, darken($bgColor, $darkenPercent) 0%, lighten($bgColor, $darkenPercent) 35%, darken($bgColor, $darkenPercent) 80%);
 }
 
 @mixin top-border-radius($borderRadius) {
