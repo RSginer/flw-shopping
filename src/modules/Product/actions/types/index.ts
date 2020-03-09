@@ -7,7 +7,11 @@ export interface IProductTypes {
   INCREASE_STOCK_SUCCESS: string;
   INCREASE_STOCK_ERROR: string;
   ADD_TO_FAVORITES: string;
+  ADD_TO_FAVORITES_SUCCESS: string;
+  ADD_TO_FAVORITES_ERROR: string;
   REMOVE_FROM_FAVORITES: string;
+  REMOVE_FROM_FAVORITES_SUCCESS: string;
+  REMOVE_FROM_FAVORITES_ERROR: string;
 }
 
 export const types: IProductTypes = {
@@ -19,5 +23,9 @@ export const types: IProductTypes = {
   INCREASE_STOCK_SUCCESS: '[Product] increase stock success',
   INCREASE_STOCK_ERROR: '[Product] increase stock error',
   ADD_TO_FAVORITES: '[Product] add to favorites',
-  REMOVE_FROM_FAVORITES: '[Product] remove from favorites'
+  ADD_TO_FAVORITES_SUCCESS: '[Product] add to favorites success',
+  ADD_TO_FAVORITES_ERROR: '[Product] add to favorites error',
+  REMOVE_FROM_FAVORITES: '[Product] remove from favorites',
+  REMOVE_FROM_FAVORITES_SUCCESS: '[Product] remove from favorites success',
+  REMOVE_FROM_FAVORITES_ERROR: '[Product] remove from favorites success',
 }
