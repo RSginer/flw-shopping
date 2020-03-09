@@ -1,8 +1,8 @@
-# Shopping
+# Shopping 🛍
 
 <img src="https://raw.githubusercontent.com/RSginer/flw-shopping/master/screenshots.png"/>
 
-## Features
+## 🥇 Features
   - ✅ See a large list of products
   - ✅ See stock availability for each product
   - ✅ See the list of items in the cart
@@ -36,6 +36,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
-## 👨🏻‍🎓 Others of my React projects
+## 🏆 Others of my React projects
  - [Idle Capitalist](https://github.com/RSginer/idle-capitalist): Video Game Full Stack JS
  - [My Binge List](https://github.com/RSginer/react-movie-binge-list): TDD with Jest
