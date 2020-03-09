@@ -16,9 +16,9 @@ export const cartReducer = (state: ICartState = {
     case types.REMOVE_FROM_CART:
       return removeProductFromCart(state, action);
     case ProductTypes.types.DECREASE_STOCK_ERROR:
-      return addProductToCart(state, action);
-    case ProductTypes.types.INCREASE_STOCK_ERROR:
       return removeProductFromCart(state, action);
+    case ProductTypes.types.INCREASE_STOCK_ERROR:
+      return addProductToCart(state, action);
     default:
       return state
   }

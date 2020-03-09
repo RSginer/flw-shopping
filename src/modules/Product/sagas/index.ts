@@ -9,7 +9,7 @@ function* getProducts() {
     const products = yield call(fetchProducts);
     yield put({ type: types.FETCH_PRODUCTS_SUCCESS, payload: products });
   } catch (e) {
-    put({ type: types.FETCH_PRODUCTS_ERROR, payload: e });
+    yield put({ type: types.FETCH_PRODUCTS_ERROR, payload: e });
   }
 }
 
@@ -22,7 +22,7 @@ function* decreaseStock(action: Action) {
     const patchedProduct = yield call(updateProductStock(action.payload.id, action.payload.stock))
     yield put({ type : types.DECREASE_STOCK_SUCCESS, payload: patchedProduct.data})
   } catch (e) {
-    put({type: types.DECREASE_STOCK_ERROR, payload: e})
+    yield put({type: types.DECREASE_STOCK_ERROR, payload: action.payload})
   }
 }
 
@@ -36,7 +36,7 @@ function* increaseStock(action: Action) {
     const patchedProduct = yield call(updateProductStock(action.payload.id, action.payload.stock))
     yield put({ type : types.INCREASE_STOCK_SUCCESS, payload: patchedProduct.data})
   } catch (e) {
-    put({type: types.INCREASE_STOCK_ERROR, payload: e})
+    yield put({type: types.INCREASE_STOCK_ERROR, payload: action.payload})
   }
 }
 
@@ -47,10 +47,8 @@ export function* increaseStockSaga() {
 function* addToFavorites(action: Action) {
   try {
     const favoriteProduct = yield call(updateFavorite(action.payload.id, true))
-    console.log(favoriteProduct)
     yield put({ type: types.ADD_TO_FAVORITES_SUCCESS, payload: favoriteProduct.data })
   } catch (error) {
-    console.log(error)
     yield put({type: types.ADD_TO_FAVORITES_ERROR, payload: error})
   }
 }
@@ -64,7 +62,6 @@ function* removeFromFavorites(action: Action) {
     const favoriteProduct = yield call(updateFavorite(action.payload.id, false))
     yield put({ type: types.REMOVE_FROM_FAVORITES_SUCCESS, payload: favoriteProduct.data })
   } catch (error) {
-    console.log(error)
     yield put({type: types.REMOVE_FROM_FAVORITES_ERROR, payload: error})
   }
 }
