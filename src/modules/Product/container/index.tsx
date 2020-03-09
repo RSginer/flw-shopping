@@ -16,7 +16,7 @@ export function ProductContainer() {
   const error = useSelector((s: IAppState) => s.product.error)
 
   useEffect(() => {
-    // dispatch({ type: types.FETCH_PRODUCTS })
+     dispatch({ type: types.FETCH_PRODUCTS })
   }, [dispatch])
 
   return (
