@@ -13,17 +13,14 @@ import { Header } from './modules/Common';
 
 
 function App() {
-
-  const appTitle = "Shop 🛍"
-
   return (
     <ConnectedRouter history={history}>
-      <Header title={appTitle} />
+      <Header />
       <main className="App">
         <div className="app-content">
           <Switch>
             <Route path="/" exact component={ProductContainer} />
-            <Route path="/cart" exact component={CartContainer} />
+            <Route path="/cart" exact component={() => <CartContainer setHeader={true} />} />
           </Switch>
         </div>
       </main>

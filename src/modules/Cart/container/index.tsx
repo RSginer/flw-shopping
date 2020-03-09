@@ -1,16 +1,27 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 import './index.scss';
 
 import { IAppState } from '../../../rootReducer';
 import { EmptyOrders } from '../components/EmptyOrders/EmptyOrders';
 import { OrderItem } from '../components/OrderItem/OrderItem';
+import { setRoute } from '../../Common/actions';
 
 
-export function CartContainer() {
+export interface ICartContainer {
+  setHeader: boolean;
+}
 
+export function CartContainer(props: ICartContainer = { setHeader: true }) {
+  const dispatch = useDispatch();
   const orders = useSelector((s: IAppState) => s.cart.orders);
+
+  useEffect(() => {
+    if (props.setHeader) {
+      dispatch(setRoute(true, false, false, 'Cart'))
+    }
+  }, [dispatch, props])
 
   return (
     <div className="cart">

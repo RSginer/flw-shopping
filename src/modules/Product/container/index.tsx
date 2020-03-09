@@ -7,6 +7,7 @@ import { CartContainer } from '../../Cart';
 import { IAppState } from '../../../rootReducer';
 import { ProductListEmpty, ProductList, ProductLoading } from '../components';
 import { types } from '../actions';
+import { setRoute } from '../../Common/actions';
 
 
 export function ProductContainer() {
@@ -16,7 +17,8 @@ export function ProductContainer() {
   const error = useSelector((s: IAppState) => s.product.error)
 
   useEffect(() => {
-     dispatch({ type: types.FETCH_PRODUCTS })
+    dispatch({ type: types.FETCH_PRODUCTS })
+    dispatch(setRoute(false, true, true, 'Product List'))
   }, [dispatch])
 
   return (
@@ -28,7 +30,7 @@ export function ProductContainer() {
         {!loading && error && <div>{error.toJSON()}</div>}
       </div>
       <div className="hidden-xs hidden-sm col-md-4 cart-container-wrapper">
-        <CartContainer />
+        <CartContainer setHeader={false} />
       </div>
     </div>
 
