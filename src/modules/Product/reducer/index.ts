@@ -4,7 +4,7 @@ export interface IProductState {
   productList: Product[];
 }
 
-export default (state: IProductState = {
+export const productReducer = (state: IProductState = {
   productList: []
 }, action: Action) => {
   switch (action.type) {

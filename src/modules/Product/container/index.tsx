@@ -1,13 +1,14 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+
 import './index.scss';
-import ProductList from '../components/ProductList/ProductList';
+
 import { CartContainer } from '../../Cart';
 import { IAppState } from '../../../rootReducer';
-import ProductListEmpty from '../components/ProductListEmpty/ProductListEmpty';
+import { ProductListEmpty, ProductList } from '../components';
 
 
-function ProductContainer() {
+export function ProductContainer() {
 
   const products = useSelector((s: IAppState) => s.product.productList)
 
@@ -24,5 +25,3 @@ function ProductContainer() {
 
   );
 }
-
-export default ProductContainer;

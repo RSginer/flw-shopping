@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router'
 import { History } from 'history';
-import product, { IProductState } from './modules/Product/reducer';
 
+import { productReducer, IProductState } from './modules/Product';
 import { cartReducer, ICartState } from './modules/Cart';
 
 export interface IAppState {
@@ -13,6 +13,6 @@ export interface IAppState {
 
 export default (history: History) => combineReducers({
   cart: cartReducer,
-  product,
+  product: productReducer,
   router: connectRouter(history)
 })

@@ -2,10 +2,10 @@ import React from 'react';
 import './ProductPreview.scss';
 
 import { PlusCircle } from 'react-feather';
-import FavoriteHeart from '../FavoriteHeart/FavoriteHeart';
-import { Product } from '../../../../models/Product';
+import { FavoriteHeart } from '../../components';
+import { Product } from '../../../../models';
 
-function ProductPreview(props: Product) {
+export function ProductPreview(props: Product) {
   return (
     <div className="product-preview col-xs-6 col-sm-4 col-lg-3">
       <div className="product-preview-content">
@@ -22,9 +22,6 @@ function ProductPreview(props: Product) {
         </div>
       </div>
     </div>
-
   );
 }
-
-export default ProductPreview;
 

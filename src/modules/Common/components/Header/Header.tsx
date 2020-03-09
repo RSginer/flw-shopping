@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Header.scss';
-import FavoriteHeart from '../../Product/components/FavoriteHeart/FavoriteHeart';
+import { FavoriteHeart } from '../../../Product';
 import { ShoppingCart } from 'react-feather';
 import { useDispatch } from 'react-redux';
 import { push } from 'connected-react-router';
@@ -11,7 +11,7 @@ export interface IHeader {
   title: string;
 }
 
-function Header(props: IHeader) {
+export function Header(props: IHeader) {
 
   const dispatch = useDispatch();
 
@@ -32,5 +32,3 @@ function Header(props: IHeader) {
     </div>
   );
 }
-
-export default Header;
