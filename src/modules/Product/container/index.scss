@@ -1,3 +1,7 @@
+@import 'scss/vars';
+@import 'scss/colors';
+@import 'scss/mixins';
+
 .product-container {
   height: 100%;
 
@@ -7,5 +11,13 @@
 
   .product-list-wrapper {
     padding-right: 0;
+  }
+
+
+}
+
+@media only screen and (min-width: $bp-large) and (max-width: $bp-large + 1) {
+  .ipad-pro-fix {
+    display: flex !important;
   }
 }

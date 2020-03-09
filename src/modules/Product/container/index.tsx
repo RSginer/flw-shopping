@@ -48,7 +48,7 @@ export function ProductContainer(props: IProductContainer = { isFavorites: false
         {!error && loading && <ProductLoading />}
         {!loading && error && <div>{error.toJSON()}</div>}
       </div>
-      {!props.isFavorites && <div className="hidden-xs hidden-sm col-md-4 cart-container-wrapper">
+      {!props.isFavorites && <div className="hidden-xs hidden-sm ipad-pro-fix col-md-4 cart-container-wrapper">
         <CartContainer setHeader={false} />
       </div>}
     </div>
