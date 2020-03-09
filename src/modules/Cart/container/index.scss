@@ -39,6 +39,7 @@
       text-align: right;
       font-weight: bold;
       font-size: 0.8em;
+      color: lighten($color: $dark, $amount: 35);
     }
 
     .total-label-amount {
@@ -54,5 +55,11 @@
     border-radius: $borderRadius;
     font-weight: bold;
     border: none;
+    cursor: pointer;
+
+    &:disabled {
+      background: $light;
+      cursor: not-allowed;
+    }
   }
 }

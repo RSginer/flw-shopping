@@ -18,11 +18,11 @@ function CartContainer(props: ICartState) {
         {orders.length === 0 && <EmpryOrders />}
       </div>
       <hr />
-      <div className="cart-total-price">
+      {orders.length > 0 && <div className="cart-total-price">
         <span className="total-label">Total Amount</span>
         <span className="total-label-amount">10000</span>
-      </div>
-      <button className="checkout-button">Make a payment</button>
+      </div>}
+      <button disabled={orders.length === 0} className="checkout-button">Make a payment</button>
     </div>
   );
 }
