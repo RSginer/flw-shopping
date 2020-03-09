@@ -17,7 +17,7 @@ function ProductContainer() {
         {products.length > 0 &&  <ProductList products={products} />}
         {products.length === 0 && <ProductListEmpty />}
       </div>
-      <div className="hidden-xs col-md-4 cart-container-wrapper">
+      <div className="hidden-xs hidden-sm col-md-4 cart-container-wrapper">
         <CartContainer />
       </div>
     </div>
