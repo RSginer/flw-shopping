@@ -1,0 +1,8 @@
+@import 'scss/vars';
+@import 'scss/colors';
+@import 'scss/mixins';
+
+.favorites-container {
+  margin: $baseSpacing;
+  padding: $baseSpacing
+}
