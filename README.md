@@ -2,26 +2,38 @@
 
 <img src="https://raw.githubusercontent.com/RSginer/flw-shopping/master/screenshots.png"/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+  - ✅ See a large list of products
+  - ✅ See stock availability for each product
+  - ✅ See the list of items in the cart
+  - ✅ Add a product to the cart
+  - ✅ Increase/decrease the quantity of products already in the cart, decreasing down 0 will remove the product from the cart.
+  - ✅ See cart total amount
+  - ✅ Add product to  favorite products
+  - ✅ List the favorite products
 
-## Available Scripts
+### Getting Started 🎉
 
 In the project directory, you can run:
 
-### `yarn start`
+`yarn install`
 
-Runs the app in the development mode.<br />
+Install dependencies
+
+`yarn start`
+
+Runs the app in the development mode and starts the server on [http://localhost:3001](http://localhost:3001).<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+`yarn test`
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+`yarn build`
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
