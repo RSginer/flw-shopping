@@ -22,6 +22,8 @@ export const productReducer = (state: IProductState = {
       return { ...state, productList: [], loading: false, error: action.payload };
     case CartActions.types.ADD_TO_CART:
       return addProductToCart(state, action)
+    case CartActions.types.REMOVE_FROM_CART:
+      return removeProductFromCart(state, action)
     default:
       return state
   }
@@ -33,6 +35,20 @@ function addProductToCart(state: IProductState, action: Action): IProductState {
   if (product) {
     if (product.stock && product?.stock > 0) {
       product.stock--;
+    }
+
+    return { ...state, productList: [...state.productList, product] }
+  }
+
+  return state;
+}
+
+function removeProductFromCart(state: IProductState, action: Action): IProductState {
+  const product = state.productList.find((p: Product) => p.id === action.payload.id);
+
+  if (product) {
+    if (product.stock !== undefined) {
+      product.stock++;
     }
 
     return { ...state, productList: [...state.productList, product] }

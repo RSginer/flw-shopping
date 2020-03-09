@@ -9,3 +9,10 @@ export function addToCart(product: Product) {
     payload: product
   }
 }
+
+export function removeFromCart(product: Product) {
+  return {
+    type: types.REMOVE_FROM_CART,
+    payload: product
+  }
+}

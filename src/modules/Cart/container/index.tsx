@@ -8,6 +8,7 @@ import { EmptyOrders } from '../components/EmptyOrders/EmptyOrders';
 import { OrderItem } from '../components/OrderItem/OrderItem';
 import { setRoute } from '../../Common/actions';
 import { Order } from '../../../models';
+import { types, addToCart, removeFromCart } from '../actions';
 
 
 export interface ICartContainer {
@@ -37,7 +38,9 @@ export function CartContainer(props: ICartContainer = { setHeader: true }) {
   return (
     <div className="cart">
       <div className="cart-orders-list">
-        {orders.length > 0 && orders.map((o, i) => <OrderItem key={i} {...o} />)}
+        {orders.length > 0 && orders.map((o, i) => <OrderItem key={i} 
+        onIncrease={() => dispatch(addToCart(o.product))} 
+        onDecrease={() => dispatch(removeFromCart(o.product))} order={o} />)}
         {orders.length === 0 && <EmptyOrders />}
       </div>
       <hr />

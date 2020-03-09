@@ -12,6 +12,8 @@ export const cartReducer = (state: ICartState = {
   switch (action.type) {
     case types.ADD_TO_CART:
       return addProductToCart(state, action);
+    case types.REMOVE_FROM_CART:
+      return removeProductFromCart(state, action);
     default:
       return state
   }
@@ -20,12 +22,25 @@ export const cartReducer = (state: ICartState = {
 function addProductToCart(state: ICartState, action: Action): ICartState {
   const orders: Order[] = state.orders;
   const productInCart = orders.find((o: Order) => o.product.id === action.payload.id)
-  
+
   if (productInCart) {
     action.payload.stock > 0 && productInCart.quantity++;
   } else {
     action.payload.stock > 0 && orders.push(new Order(action.payload, 1));
   }
 
-  return {...state, orders: [...orders]};
+  return { ...state, orders: [...orders] };
+}
+
+function removeProductFromCart(state: ICartState, action: Action): ICartState {
+  let orders: Order[] = state.orders;
+  const productInCart = orders.find((o: Order) => o.product.id === action.payload.id)
+
+  if (productInCart && productInCart.quantity > 1) {
+    productInCart.quantity--;
+  } else {
+    orders = orders.filter((o) => o.product.id !== action.payload.id)
+  }
+
+  return { ...state, orders: [...orders] };
 }
