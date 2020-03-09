@@ -12,30 +12,40 @@ import { setRoute } from '../../Shared/actions';
 import { Product } from '../../../models';
 
 
-export function ProductContainer() {
+export interface IProductContainer {
+  favorites: boolean;
+}
+
+export function ProductContainer(props: IProductContainer = { favorites: false }) {
   const dispatch = useDispatch();
   const products = useSelector((s: IAppState) => s.product.productList)
   const loading = useSelector((s: IAppState) => s.product.loading)
   const error = useSelector((s: IAppState) => s.product.error)
   const fetched = useSelector((s: IAppState) => s.product.productsFetched)
   useEffect(() => {
-    dispatch(setRoute(false, true, true, 'Shop 🛍'))
+
+    if (!props.favorites) {
+      dispatch(setRoute(false, true, true, 'Shop 🛍'))
+    } else {
+      dispatch(setRoute(true, false, false, 'Favorites ❤️'))
+    }
+
 
     if (!fetched)
-      dispatch({ type: types.FETCH_PRODUCTS })
-  }, [dispatch, fetched])
+      dispatch({ type: types.FETCH_PRODUCTS, payload: props.favorites })
+  }, [dispatch, fetched, props])
 
   return (
     <div className="product-container row">
-      <div className="col-xs-12 col-sm-12 col-md-8 product-list-wrapper">
-        {!loading && !error && products.length > 0 && <ProductList onAddToCart={(product: Product) => dispatch({ type: CartAction.types.ADD_TO_CART, payload: product })} products={products} />}
+      <div className={`${props.favorites ? 'col-xs-12 product-list-wrapper' : 'col-xs-12 col-sm-12 col-md-8 product-list-wrapper'}`}>
+        {!loading && !error && products.length > 0 && <ProductList favorites={props.favorites} onAddToCart={(product: Product) => dispatch({ type: CartAction.types.ADD_TO_CART, payload: product })} products={products} />}
         {!loading && !error && products.length === 0 && <ProductListEmpty />}
         {!error && loading && <ProductLoading />}
         {!loading && error && <div>{error.toJSON()}</div>}
       </div>
-      <div className="hidden-xs hidden-sm col-md-4 cart-container-wrapper">
+      {!props.favorites && <div className="hidden-xs hidden-sm col-md-4 cart-container-wrapper">
         <CartContainer setHeader={false} />
-      </div>
+      </div>}
     </div>
 
   );
