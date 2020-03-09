@@ -29,7 +29,7 @@ export function Header() {
     <div className="header">
       <div className="container-fluid header-content">
         <div className="left-icons">
-          {favoritesButton && <span className="favorite-icon"><FavoriteHeart isFavorite={true} /></span>}
+          {favoritesButton && <span className="favorite-icon" onClick={() => dispatch(push('/favorites'))}><FavoriteHeart isFavorite={true} /></span>}
           {backButton && <ArrowLeft onClick={() => dispatch(push('/'))} size={25} />}
         </div>
         <h1 className="app-title">{title}</h1>

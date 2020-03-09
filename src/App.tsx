@@ -9,6 +9,7 @@ import { Route, Switch } from "react-router-dom";
 import  { ProductContainer }  from './modules/Product';
 import { CartContainer } from './modules/Cart';
 import { Header } from './modules/Shared';
+import { FavoritesContainer } from './modules/Favorites';
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Switch>
             <Route path="/" exact component={ProductContainer} />
             <Route path="/cart" exact component={() => <CartContainer setHeader={true} />} />
+            <Route path="/favorites" exact component={() => <FavoritesContainer />} />
           </Switch>
         </div>
       </main>
