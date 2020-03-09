@@ -9,3 +9,7 @@ export async function fetchProducts() {
 export function updateProductStock(productId: string, stock: number) {
   return async () => await axios.patch(`${config.serverUri}/grocery/${productId}`, {stock: stock})
 }
+
+export function updateFavorite(productId: string, favorite: boolean) {
+  return async () => await axios.patch(`${config.serverUri}/grocary/${productId}`, { favorite: favorite ? "1" : 0})
+}

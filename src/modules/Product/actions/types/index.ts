@@ -6,6 +6,8 @@ export interface IProductTypes {
   DECREASE_STOCK_ERROR: string;
   INCREASE_STOCK_SUCCESS: string;
   INCREASE_STOCK_ERROR: string;
+  ADD_TO_FAVORITES: string;
+  REMOVE_FROM_FAVORITES: string;
 }
 
 export const types: IProductTypes = {
@@ -16,4 +18,6 @@ export const types: IProductTypes = {
   DECREASE_STOCK_ERROR: '[Product] decrease stock error',
   INCREASE_STOCK_SUCCESS: '[Product] increase stock success',
   INCREASE_STOCK_ERROR: '[Product] increase stock error',
+  ADD_TO_FAVORITES: '[Product] add to favorites',
+  REMOVE_FROM_FAVORITES: '[Product] remove from favorites'
 }
