@@ -11,6 +11,8 @@
   - ✅ See cart total amount
   - ✅ Add product to  favorite products
   - ✅ List the favorite products
+  - ✅ Optimistic UI with rollback on server error
+  - ✅ Multiple device ready
 
 ### Getting Started 🎉
 
