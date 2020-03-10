@@ -13,6 +13,17 @@
     padding-right: 0;
   }
 
+  .product-list-error {
+    margin: $baseSpacing;
+    padding: $baseSpacing;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
 
 }
 

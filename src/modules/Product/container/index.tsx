@@ -59,7 +59,7 @@ export function ProductContainer(
         )}
         {!loading && !error && products.length === 0 && <ProductListEmpty />}
         {!error && loading && <ProductLoading />}
-        {!loading && error && <div>{error.toJSON()}</div>}
+          {!loading && error && <div className="product-list-error">{error.message} <span role="img" aria-label="cry"> 😭</span></div>}
       </div>
       {!props.isFavorites && (
         <div className="hidden-xs hidden-sm ipad-pro-fix col-md-4 cart-container-wrapper">
