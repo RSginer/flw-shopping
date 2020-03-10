@@ -2,14 +2,14 @@ import React from 'react';
 import './ProductPreview.scss';
 
 import { PlusCircle } from 'react-feather';
-import { Product } from '../../../../models';
+import { Product, Action } from '../../../../models';
 import { FavoriteHeart } from '../../../Shared';
 
 export interface IProductPreview {
   product: Product;
   favorites: boolean;
-  onAddToCart: () => void;
-  onFavoriteClick: () => void;
+  onAddToCart: (product: Product) => Action;
+  onFavoriteClick: (product: Product) => Action;
 }
 
 export function ProductPreview(props: IProductPreview) {

@@ -2,14 +2,14 @@ import React from 'react';
 
 import './ProductList.scss';
 
-import { Product } from '../../../../models';
+import { Product, Action } from '../../../../models';
 import { ProductPreview } from '../ProductPreview/ProductPreview';
 
 export interface IProductList {
   products: Product[];
   favorites: boolean;
-  onAddToCart: () => void;
-  onFavoriteClick: () => void;
+  onAddToCart: (product: Product) => Action;
+  onFavoriteClick: (product: Product) => Action;
 }
 
 export function ProductList(props: IProductList) {
