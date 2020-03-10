@@ -20,7 +20,9 @@ In the project directory, you can run:
 
 Install dependencies
 
-`yarn start`
+`yarn start:server` it runs server
+`yarn start:webapp` it runs webapp
+`yarn start` it runs both
 
 Runs the app in the development mode and starts the server on [http://localhost:3001](http://localhost:3001).<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
