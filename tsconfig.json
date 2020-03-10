@@ -19,6 +19,7 @@
     "noEmit": true,
     "jsx": "react"
   },
+  "plugins": [{"name": "typescript-tslint-plugin"}],
   "include": [
     "src", "src/models"
   ]

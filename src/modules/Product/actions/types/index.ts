@@ -28,4 +28,4 @@ export const types: IProductTypes = {
   REMOVE_FROM_FAVORITES: '[Product] remove from favorites',
   REMOVE_FROM_FAVORITES_SUCCESS: '[Product] remove from favorites success',
   REMOVE_FROM_FAVORITES_ERROR: '[Product] remove from favorites success',
-}
+};

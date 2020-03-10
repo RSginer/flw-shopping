@@ -1,5 +1,5 @@
-import { Action } from "../../../models/Action";
-import { types } from "../actions/types";
+import { Action } from '../../../models/Action';
+import { types } from '../actions/types';
 
 export interface ISharedState {
   backButton: boolean;
@@ -7,15 +7,18 @@ export interface ISharedState {
   favoritesButton: boolean;
 }
 
-export const sharedReducer = (state: ISharedState = {
-  backButton: false,
-  title: 'Shop 🛍',
-  favoritesButton: true,
-}, action: Action) => {
-  switch(action.type) {
+export const sharedReducer = (
+  state: ISharedState = {
+    backButton: false,
+    title: 'Shop 🛍',
+    favoritesButton: true,
+  },
+  action: Action
+) => {
+  switch (action.type) {
     case types.SET_ROUTE:
-      return {...state, ...action.payload}
+      return { ...state, ...action.payload };
     default:
       return state;
   }
-}
+};

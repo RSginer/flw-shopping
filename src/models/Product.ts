@@ -9,7 +9,7 @@ export interface IProduct {
 }
 
 export class Product implements IProduct {
-  id?: string;  
+  id?: string;
   image_url?: string;
   stock?: number;
   productName?: string;
@@ -18,6 +18,6 @@ export class Product implements IProduct {
   favorite?: string | number;
 
   constructor(data?: IProduct) {
-    Object.assign(this, data)
-  } 
+    Object.assign(this, data);
+  }
 }

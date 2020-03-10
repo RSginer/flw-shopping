@@ -1,4 +1,4 @@
-import { Product } from "./Product";
+import { Product } from './Product';
 
 export interface IOrder {
   product: Product;
@@ -12,5 +12,5 @@ export class Order implements IOrder {
   constructor(product: Product, quantity: number) {
     this.product = product;
     this.quantity = quantity;
-  } 
+  }
 }

@@ -1,3 +1,3 @@
 export const config = {
-  serverUri: 'http://localhost:3001'
-}
+  serverUri: 'http://localhost:3001',
+};

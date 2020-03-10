@@ -1,6 +1,6 @@
 export interface IAction {
   type: string;
-  payload: any
+  payload: any;
 }
 
 export class Action {

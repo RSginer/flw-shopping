@@ -1,4 +1,3 @@
-
 import React from 'react';
 import './ProductListEmpty.scss';
 
@@ -9,4 +8,3 @@ export function ProductListEmpty() {
     </div>
   );
 }
-

@@ -6,13 +6,13 @@ export * from './types';
 export function addToCart(product: Product) {
   return {
     type: types.ADD_TO_CART,
-    payload: product
-  }
+    payload: product,
+  };
 }
 
 export function removeFromCart(product: Product) {
   return {
     type: types.REMOVE_FROM_CART,
-    payload: product
-  }
+    payload: product,
+  };
 }
