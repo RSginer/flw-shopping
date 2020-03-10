@@ -15,7 +15,7 @@
   - ✅ Multiple device ready
 
 ### 🗒 TODO
-  - ⚠️ Tests (See [My Movies Binge List](https://github.com/RSginer/react-movie-binge-list) for Tests examples)
+  - ⚠️ Tests __(See [My Movies Binge List](https://github.com/RSginer/react-movie-binge-list) for Tests examples)__
 
 ### Getting Started 🎉
 
