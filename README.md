@@ -14,6 +14,10 @@
   - ✅ Optimistic UI with rollback on server error
   - ✅ Multiple device ready
 
+## TODO:
+  - ⚠️ Tests
+  - ⚠️ Product list pagination
+
 ### Getting Started 🎉
 
 In the project directory, you can run:
