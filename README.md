@@ -9,10 +9,11 @@
   - ✅ Add a product to the cart
   - ✅ Increase/decrease the quantity of products already in the cart, decreasing down 0 will remove the product from the cart.
   - ✅ See cart total amount
-  - ✅ Add product to  favorite products
-  - ✅ List the favorite products
-  - ✅ Optimistic UI with rollback on server error
   - ✅ Multiple device ready
+  - ✅ ⭐️ Add product to  favorite products
+  - ✅ ⭐️ List the favorite products
+  - ✅ 🚀 Optimistic UI with rollback on server error
+ 
 
 ### 🗒 TODO
   - ⚠️ Tests. _(See [My Movies Binge List](https://github.com/RSginer/react-movie-binge-list) for Tests examples)_
@@ -43,5 +44,5 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 ## 🏆 Others of my React projects
- - [Idle Capitalist](https://github.com/RSginer/idle-capitalist): Video Game Full Stack JS
- - [My Movies Binge List](https://github.com/RSginer/react-movie-binge-list): TDD with Jest
+ - [Idle Capitalist](https://github.com/RSginer/idle-capitalist): 🎮 Video Game Full Stack JS
+ - [My Movies Binge List](https://github.com/RSginer/react-movie-binge-list): 🎬 TDD with Jest
