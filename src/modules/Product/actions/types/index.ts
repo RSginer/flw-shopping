@@ -17,7 +17,7 @@ export interface IProductTypes {
 export const types: IProductTypes = {
   FETCH_PRODUCTS: '[Product] fetch start',
   FETCH_PRODUCTS_SUCCESS: '[Product] fetch success',
-  FETCH_PRODUCTS_ERROR: '[Product] fetch success',
+  FETCH_PRODUCTS_ERROR: '[Product] fetch error',
   DECREASE_STOCK_SUCCESS: '[Product] decrease stock success',
   DECREASE_STOCK_ERROR: '[Product] decrease stock error',
   INCREASE_STOCK_SUCCESS: '[Product] increase stock success',
