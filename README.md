@@ -16,7 +16,6 @@
 
 ### 🗒 TODO
   - ⚠️ Tests
-  - ⚠️ Product list pagination
 
 ### Getting Started 🎉
 
@@ -26,12 +25,11 @@ In the project directory, you can run:
 
 Install dependencies
 
-`yarn start:server` it runs server
-`yarn start:webapp` it runs webapp
-`yarn start` it runs both
+`yarn start:server` it runs server. Open [http://localhost:3001/grocery](http://localhost:3001/grocery) to view it in the browser.
 
-Runs the app in the development mode and starts the server on [http://localhost:3001](http://localhost:3001).<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`yarn start:webapp` it runs webapp. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+`yarn start` it runs both
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
