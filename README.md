@@ -15,7 +15,7 @@
   - ✅ Multiple device ready
 
 ### 🗒 TODO
-  - ⚠️ Tests (See [My Binge List](https://github.com/RSginer/react-movie-binge-list) for Tests examples)
+  - ⚠️ Tests (See [My Movies Binge List](https://github.com/RSginer/react-movie-binge-list) for Tests examples)
 
 ### Getting Started 🎉
 
@@ -44,4 +44,4 @@ Your app is ready to be deployed!
 
 ## 🏆 Others of my React projects
  - [Idle Capitalist](https://github.com/RSginer/idle-capitalist): Video Game Full Stack JS
- - [My Binge List](https://github.com/RSginer/react-movie-binge-list): TDD with Jest
+ - [My Movies Binge List](https://github.com/RSginer/react-movie-binge-list): TDD with Jest
