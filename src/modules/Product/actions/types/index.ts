@@ -27,5 +27,5 @@ export const types: IProductTypes = {
   ADD_TO_FAVORITES_ERROR: '[Product] add to favorites error',
   REMOVE_FROM_FAVORITES: '[Product] remove from favorites',
   REMOVE_FROM_FAVORITES_SUCCESS: '[Product] remove from favorites success',
-  REMOVE_FROM_FAVORITES_ERROR: '[Product] remove from favorites success',
+  REMOVE_FROM_FAVORITES_ERROR: '[Product] remove from favorites error',
 };
