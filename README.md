@@ -14,7 +14,7 @@
   - ✅ Optimistic UI with rollback on server error
   - ✅ Multiple device ready
 
-## TODO:
+### 🗒 TODO
   - ⚠️ Tests
   - ⚠️ Product list pagination
 
